@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "framing": {
+    "objective": "Build an audience by helping people feel more hopeful about AI through credible stories of its benefits.",
+    "desiredOutcome": "Readers discover believable reasons for hope, develop a more informed view, and choose to return or share.",
+    "targetCustomer": "Everyday people who are curious about AI but uneasy about its direction."
+  },
+  "records": [
+    {
+      "id": "decision-purpose",
+      "type": "decision",
+      "status": "active",
+      "statement": "Build an audience by helping people feel more hopeful about AI through credible stories of its benefits.",
+      "rationale": "The user aligned audience growth and helping people feel hopeful, accepted this framing, and requested solution generation. This is user-selected direction, not market evidence.",
+      "evidenceRefs": []
+    },
+    {
+      "id": "assumption-audience",
+      "type": "assumption",
+      "status": "active",
+      "statement": "People who feel uneasy about AI but remain curious and open to benefits are a promising initial audience; this segment has not been validated."
+    },
+    {
+      "id": "evidence-concern",
+      "type": "evidence",
+      "status": "active",
+      "statement": "The March 2026 Quinnipiac survey found 80% somewhat or very concerned about AI and 55% expecting more harm than good in daily life. Concern does not establish demand for positive coverage or show that coverage caused concern.",
+      "provenance": {
+        "source": "Quinnipiac University national poll, March 30, 2026",
+        "locator": "https://poll.qu.edu/images/polling/us/us03302026_uaio53.pdf",
+        "observedAt": "2026-09-14",
+        "method": "Reviewed in preceding opportunity assessment"
+      }
+    },
+    {
+      "id": "evidence-mixed-feelings",
+      "type": "evidence",
+      "status": "active",
+      "statement": "Pew reported 38% equally excited and concerned in 2025, and majority openness to AI assistance with daily tasks.",
+      "provenance": {
+        "source": "Pew Research Center, September 17, 2025",
+        "locator": "https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/",
+        "observedAt": "2026-09-14",
+        "method": "Reviewed in preceding opportunity assessment"
+      }
+    },
+    {
+      "id": "evidence-existing-offer",
+      "type": "evidence",
+      "status": "active",
+      "statement": "AI Wins offers an automated positive AI news feed. Its existence demonstrates an alternative, not validated demand or business success.",
+      "provenance": {
+        "source": "AI Wins website",
+        "locator": "https://www.aiwins.news/",
+        "observedAt": "2026-09-14",
+        "method": "Reviewed in preceding opportunity assessment"
+      }
+    },
+    {
+      "id": "solution-weekly-progress",
+      "type": "solution",
+      "status": "candidate",
+      "title": "Three reasons for hope",
+      "statement": "A short weekly edition presents three verified examples of AI benefiting people, with a source and an explicit limitation for each.",
+      "mechanism": "Repeated exposure makes beneficial developments easier to notice and recall.",
+      "keyAssumptions": [
+        "Readers want a recurring broad digest and distinguish its judgment from existing feeds."
+      ],
+      "primaryRisk": {
+        "riskKind": "value",
+        "statement": "Appreciation does not become a habit; positive-only selection can undermine trust."
+      },
+      "cheapestTest": "Hand-curate two editions for 12 prospective readers; observe requests for the next edition and later story recall."
+    },
+    {
+      "id": "solution-human-stories",
+      "type": "solution",
+      "status": "candidate",
+      "title": "Meet someone AI helped",
+      "statement": "Each edition tells one real person or community story: the original difficulty, how AI was used, what changed, and what still requires human effort.",
+      "mechanism": "A concrete person and outcome make a benefit emotionally meaningful.",
+      "keyAssumptions": [
+        "A human story increases hope without appearing cherry-picked or promotional."
+      ],
+      "primaryRisk": {
+        "riskKind": "feasibility",
+        "statement": "Finding and verifying representative stories takes time; one anecdote can imply too much."
+      },
+      "cheapestTest": "Create one sourced profile without invented quotes and test against a factual digest of the same case; measure trust, recall, and requests for more."
+    },
+    {
+      "id": "solution-concern-led",
+      "type": "solution",
+      "status": "candidate",
+      "title": "Hope around what worries you",
+      "statement": "Readers choose a concern such as work, learning, or creativity and receive relevant, verified examples of helpful uses alongside unresolved limits.",
+      "mechanism": "Personal relevance connects an abstract benefit to a concern the reader actually holds.",
+      "keyAssumptions": [
+        "Useful examples address the reader's concern enough to be welcome."
+      ],
+      "primaryRisk": {
+        "riskKind": "value",
+        "statement": "Positive examples may feel dismissive of structural harms or evade the original worry."
+      },
+      "cheapestTest": "Ask six readers for their main concern, manually prepare one relevant brief each, and ask what it addressed and what it left unanswered."
+    },
+    {
+      "id": "solution-shared-discovery",
+      "type": "solution",
+      "status": "candidate",
+      "title": "A hopeful story worth passing on",
+      "statement": "Publish a concise illustrated story or short narrated video designed for a reader to share with someone who has mixed feelings about AI.",
+      "mechanism": "A trusted person introduces the story; sharing brings new people to a recurring publication.",
+      "keyAssumptions": [
+        "Readers want to share this subject and recipients welcome the story."
+      ],
+      "primaryRisk": {
+        "riskKind": "viability",
+        "statement": "Content may circulate only among enthusiasts or be interpreted as an argument."
+      },
+      "cheapestTest": "Offer a single shareable story to ten readers with no requirement to forward; track voluntary sharing and recipient interest where consent permits."
+    },
+    {
+      "id": "solution-firsthand-benefit",
+      "type": "solution",
+      "status": "candidate",
+      "title": "Try one small good thing",
+      "statement": "Pair a credible benefit story with an optional ten-minute activity, such as using AI to understand a difficult concept and checking the explanation against the source.",
+      "mechanism": "A personally useful experience can create agency and grounded hope.",
+      "keyAssumptions": [
+        "A low-stakes experience changes the emotional response more than reading alone."
+      ],
+      "primaryRisk": {
+        "riskKind": "usability",
+        "statement": "Setup, errors, and privacy concerns can frustrate readers; this may become a tutorial product."
+      },
+      "cheapestTest": "Compare story-only with the same story plus an optional activity; observe completion, usefulness, frustration, and desire to repeat."
+    },
+    {
+      "id": "unknown-repeat-value",
+      "type": "unknown",
+      "status": "open",
+      "statement": "Which mechanism produces trustworthy hope and voluntary repeat engagement among initially uneasy readers?"
+    },
+    {
+      "id": "unknown-revenue",
+      "type": "unknown",
+      "status": "open",
+      "statement": "Revenue model and willingness to pay are not established; the agreed immediate outcome is hope and audience growth."
+    },
+    {
+      "id": "experiment-compare-mechanisms",
+      "type": "experiment",
+      "status": "proposed",
+      "statement": "Compare a factual progress digest with a human-centered treatment before choosing a recurring format.",
+      "question": "Does a human story produce more trusted, memorable hope and repeat demand than a short factual digest?",
+      "method": "Recruit 8-12 curious but uneasy readers beyond immediate supporters. Use the same verified case in both treatments; vary presentation order. Ask what changed in their understanding, what felt overstated, which they want next, and later what they recall. Then test the stronger treatment in four weekly editions with 20-30 opt-in readers.",
+      "successSignal": "Directional evidence that readers can name a credible benefit and its limitation, feel more hopeful without losing trust, and voluntarily request further editions. Small samples guide iteration rather than prove causality.",
+      "relatedRecords": [
+        "solution-weekly-progress",
+        "solution-human-stories",
+        "unknown-repeat-value"
+      ]
+    },
+    {
+      "id": "decision-weekly-publication",
+      "type": "decision",
+      "status": "active",
+      "statement": "Implement a weekly roundup of good news about AI or outcomes AI contributed to, plus occasional evidence-led deep dives into contentious issues. Include demonstrated benefits and clearly labeled promising research.",
+      "rationale": "User proposed the format, confirmed audience and editorial standards, and requested implementation. This is an agreed direction, not audience validation.",
+      "evidenceRefs": []
+    }
+  ]
+}
