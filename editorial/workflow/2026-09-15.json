@@ -28,8 +28,20 @@
       "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
       "package": ".newsroom/releases/2026-09-15/37cf025dbe9bb8359e04c0cfa54ab7b71e0fa5659ed1455b90b1f40140af49ea",
       "at": "2026-09-16T03:25:25.926398+00:00"
+    },
+    {
+      "event": "renumbered",
+      "revision": "04b2af8d2e978655ca62d2cc9a0141971049c73e3c39a21b05d47a85c3e0c47b",
+      "summary": "Superseded the pilot and renumbered this approved edition from Issue 002 to Issue 001.",
+      "at": "2026-09-16T03:40:00Z"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "04b2af8d2e978655ca62d2cc9a0141971049c73e3c39a21b05d47a85c3e0c47b",
+      "package": ".newsroom/releases/2026-09-15/a0ce46042b44871724628101a23b7fa431f084bb336cd3a3f722f769863b0f51",
+      "at": "2026-09-16T03:30:24.811034+00:00"
     }
   ],
-  "prepared_revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+  "prepared_revision": "04b2af8d2e978655ca62d2cc9a0141971049c73e3c39a21b05d47a85c3e0c47b",
   "feedback_pending": false
 }

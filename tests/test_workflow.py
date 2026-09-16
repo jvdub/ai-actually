@@ -14,6 +14,10 @@ class Workflow(unittest.TestCase):
         for name in ('publication.json','newsroom.py','publication.py','amplify.yml'):
             shutil.copyfile(p.ROOT/name,self.root/name)
         self.slug='2026-09-15'
+        for slug in (self.slug,'data-centers-water-power'):
+            path,item=n.find_item(slug,self.root)
+            item['status']='draft';item.pop('reviewed_sha256',None)
+            p.write(path,item)
         cfg=p.config(self.root);cfg.update(site_url='https://example.org',contact_email='editor@example.org',kit_email_address='editor@example.org',kit_email_template_id=123)
         p.write(self.root/'publication.json',cfg)
         for _,_,entry in p.load_items(self.root):self.review(entry["slug"])
@@ -41,7 +45,7 @@ class Workflow(unittest.TestCase):
     def test_approval_revision_and_published_guard(self):
         self.approve();path,d=self.item();d['intro']+=' An edit.'
         with self.assertRaisesRegex(ValueError,'changed since review'):p.validate(d)
-        with self.assertRaisesRegex(ValueError,'cannot be approved'):n.approve('2026-09-14-pilot',self.root)
+        with self.assertRaisesRegex(ValueError,'cannot be approved'):n.approve('data-centers',self.root)
     def test_source_window_and_html(self):
         _,d=self.item();d['stories'][0]['source_date']='2026-09-01'
         with self.assertRaisesRegex(ValueError,'outside'):p.validate(d)

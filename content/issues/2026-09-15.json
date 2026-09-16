@@ -1,13 +1,13 @@
 {
   "slug": "2026-09-15",
   "kind": "issue",
-  "number": "002",
+  "number": "001",
   "title": "Safer schools, lunar maps, and practical independence",
   "description": "Five grounded signs of progress: stronger guardrails, open science, better research tools, and AI helping people act with more independence.",
   "date": "2026-09-15",
   "window_start": "2026-09-08",
   "window_end": "2026-09-14",
-  "status": "reviewed",
+  "status": "published",
   "subject": "AI, Actually: safer schools, lunar maps, and practical independence",
   "intro": "This week’s encouraging developments are concrete and varied: enforceable school privacy terms, an open model for lunar science, research aimed at making AI obey hard constraints, a laboratory discovery accelerated by AI, and two blind founders using it as an everyday accessibility tool. None settles the larger debates about AI. Together, they show what progress looks like when the benefit and the limit are both visible.",
   "feature_slug": "data-centers-water-power",
@@ -150,5 +150,5 @@
       ]
     }
   ],
-  "reviewed_sha256": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a"
+  "reviewed_sha256": "04b2af8d2e978655ca62d2cc9a0141971049c73e3c39a21b05d47a85c3e0c47b"
 }
