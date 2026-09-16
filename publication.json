@@ -1,7 +1,7 @@
 {
   "name": "AI, Actually",
   "tagline": "Hope, with context.",
-  "site_url": "",
+  "site_url": "https://ai.johnvw.dev",
   "timezone": "America/Denver",
   "publication_day": "Tuesday",
   "contact_email": "",
@@ -9,5 +9,5 @@
   "git_remote": "origin",
   "git_branch": "main",
   "kit_email_address": "",
-  "kit_email_template_id": null
+  "kit_email_template_id": 5043607
 }

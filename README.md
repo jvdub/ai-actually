@@ -16,7 +16,7 @@ A weekly publication with a local newsroom for research, editing and publishing.
 
 Website and email use the same content. Drafts and private research notes stay out of the website. Edits clear approval. Kit retries reuse the existing unsent draft.
 
-The workspace includes a four-story draft and an expanded data-center explainer. Publish the reviewed explainer first, or remove its link from the issue. The original pilot stays published locally until you approve a replacement.
+The workspace includes a four-story draft and an expanded data-center explainer. Publish the reviewed explainer first, or remove its link from the issue. Issue 001 and its linked data-center explainer are published.
 
 ## One-time setup
 - Set your HTTPS `site_url`, `contact_email`, chosen `publication_day`, and optional Kit `signup_url` in `publication.json`.
