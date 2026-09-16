@@ -1,0 +1,61 @@
+{
+  "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+  "reviewer": "AI editorial review using opened primary and underlying sources",
+  "checked_at": "2026-09-16T02:31:43.146008+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "story:0": {
+      "verdict": "supported",
+      "basis": "The joint announcement dated September 9 states that districts can incorporate the standard into Microsoft customer agreements and lists data-training, oversight, deletion, and transparency terms. This supports the announced contractual mechanism, not adoption or enforcement outcomes.",
+      "sources_checked": [
+        "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/"
+      ]
+    },
+    "story:1": {
+      "verdict": "supported",
+      "basis": "NASA's September 10 article describes the model, training data, evaluated lunar tasks, public code/model release, and limitations such as lighting effects. The public Hugging Face collection exists. This supports an open research-tool release, not a new scientific discovery.",
+      "sources_checked": [
+        "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/",
+        "https://huggingface.co/collections/nasa-ibm-ai4science/nasa-ibm-lunar-fm-and-downstream-models"
+      ]
+    },
+    "story:2": {
+      "verdict": "supported",
+      "basis": "MIT's September 14 summary and the paper record describe HardFlow and reported experiments in robotics, physical-process control, and vision. This supports a research result under evaluated conditions, not a general safety guarantee or deployed certification.",
+      "sources_checked": [
+        "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+        "https://pubmed.ncbi.nlm.nih.gov/42384531/"
+      ]
+    },
+    "story:3": {
+      "verdict": "supported",
+      "basis": "The September 9 Journal of Cell Biology paper reports computational interaction screens plus functional experiments; Cornell explains that AlphaFold produced a shortlist and cell experiments confirmed Avl9 activity. This supports AI-assisted discovery followed by lab validation, not a therapy.",
+      "sources_checked": [
+        "https://rupress.org/jcb/article/225/11/e202601003/283007/Avl9-defines-a-family-of-DENN-domain-GTPase",
+        "https://news.cornell.edu/stories/2026/09/ai-reveals-new-class-cellular-switch-linked-cancer-pathways"
+      ]
+    },
+    "story:4": {
+      "verdict": "supported",
+      "basis": "OpenAI's dated Stories index and customer account describe concrete uses by Bradford and Bryan Manning. This supports their reported deployed use only; it is company-published anecdotal evidence and does not establish population-level accessibility outcomes or navigation safety.",
+      "sources_checked": [
+        "https://openai.com/index/two-blind-brothers/"
+      ]
+    },
+    "fact:0": {
+      "verdict": "supported",
+      "basis": "NIST AI RMF 1.0 executive summary defines AI systems as generating outputs such as predictions, recommendations, or decisions. The text supports the claim that chat-style generation is not the whole category; the second sentence is explanatory context.",
+      "sources_checked": [
+        "https://airc.nist.gov/airmf-resources/airmf/0-ai-rmf-1-0/"
+      ]
+    },
+    "fact:1": {
+      "verdict": "supported",
+      "basis": "IEA's Energy and AI analysis estimates all data-center electricity consumption at about 415 TWh, or 1.5% of global use, in 2024; it separately identifies AI-driven accelerated servers and geographic concentration. This supports both the estimate and the warning against calling the whole total AI use.",
+      "sources_checked": [
+        "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai"
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "revision": "3e391556a27dbd78ecea181a8a5f901e15f2c080d9221a08a71bd968861a94fe",
+  "reviewer": "AI editorial review using opened primary and public-sector sources",
+  "checked_at": "2026-09-16T03:25:19.018180+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "IEA supports the global electricity estimates, scenario uncertainty, efficiency context, and geographic concentration. Berkeley Lab supports the 2023 US direct-water estimate and distinction between consumption and withdrawal. Virginia JLARC supports the bounded 2024 findings about construction-led benefits, ongoing employment, power costs, water variability, siting, and noise. The article labels forecasts and local evidence and does not generalize the Virginia findings to every facility.",
+      "sources_checked": [
+        "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+        "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+        "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+        "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+        "https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp"
+      ]
+    }
+  }
+}

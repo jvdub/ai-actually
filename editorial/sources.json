@@ -1,0 +1,33 @@
+{
+  "starting_points": [
+    {
+      "title": "NASA science",
+      "url": "https://science.nasa.gov/artificial-intelligence-science/"
+    },
+    {
+      "title": "MIT research",
+      "url": "https://news.mit.edu/topic/artificial-intelligence2"
+    },
+    {
+      "title": "Stanford research",
+      "url": "https://news.stanford.edu/"
+    },
+    {
+      "title": "Oxford research",
+      "url": "https://www.ox.ac.uk/news"
+    },
+    {
+      "title": "Cambridge research",
+      "url": "https://www.cam.ac.uk/research/news"
+    },
+    {
+      "title": "IEA energy analysis",
+      "url": "https://www.iea.org/topics/artificial-intelligence"
+    },
+    {
+      "title": "Berkeley Lab",
+      "url": "https://eta.lbl.gov/data-centers"
+    }
+  ],
+  "note": "Starting points, not an allowlist. Seek other credible sources and counterevidence; no single publisher should dominate by default."
+}

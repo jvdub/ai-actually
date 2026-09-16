@@ -1,0 +1,37 @@
+{
+  "slug": "data-centers-water-power",
+  "kind": "feature",
+  "title": "Data centers: separating the claims from the local reality",
+  "description": "Electricity, water, jobs and neighborhood impacts—and the questions that make the debate more useful.",
+  "date": "2026-09-15",
+  "status": "reviewed",
+  "body": "A data center can make useful AI possible and put pressure on a community's resources. Assessing one means asking what it does, what it consumes, and who receives the benefits. These are questions we can investigate without deciding in advance that every project is a disaster or a success.\n\n## “All that electricity is for AI”\n\nData centers also run websites, cloud storage and other digital services. The IEA's estimate of 415 terawatt-hours in 2024—about 1.5% of global electricity use—covered data centers as a whole. Presenting that entire amount as AI consumption overstates what the figure measures.\n\nThe IEA's 2025 base case projected about 945 terawatt-hours in 2030. That is a forecast with assumptions, not a future reading from a meter. It helps illustrate the possible scale of growth; it cannot establish the demand of a particular proposed facility. [Read the IEA analysis](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai).\n\n## “The global share is small, so local concerns are exaggerated”\n\nThe denominator changes the question. A worldwide percentage says little about whether one area's grid has spare capacity when a large new customer arrives.\n\nThe IEA's 2026 analysis explains that price effects depend on supply, demand and infrastructure. More customers can spread existing costs when capacity is available. Rapid growth can instead require expensive additions and put pressure on supply. Neither an automatic price increase nor an automatic saving follows from the words “data center.” [Read the 2026 analysis](https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary).\n\nOur practical question: what capacity is available here, when will the facility need it, and who pays if the forecast changes?\n\n## “Better chips will solve the energy problem”\n\nEfficiency improvements are encouraging. They mean a given task can require less energy. Total demand also depends on how many tasks people run and how demanding those tasks become.\n\nThe IEA reported that data-center electricity use grew 17% in 2025 even as efficiency per AI task improved. Its April 2026 update describes both clean-energy procurement and projects pursuing on-site gas. Efficiency and cleaner supply deserve attention, but a promise of improvement needs a timetable and measurable results. [Read the update](https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions).\n\n## “Every data center uses water in the same way”\n\nCooling design matters. So does the source of electricity. Berkeley Lab's 2024 US report distinguishes water consumed directly by data centers from water associated with producing their power. It estimates direct US data-center water consumption at roughly 66 billion liters in 2023; this includes facilities serving uses beyond AI.\n\nConsumption and withdrawal are different measurements: water taken from a source is not necessarily all lost from that source's immediate water cycle. A national total also does not tell you whether a proposed site's water demand is manageable during a local drought. [Read Berkeley Lab's report](https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf).\n\nFor a specific proposal, ask for annual and peak demand, cooling design, the water source, and drought arrangements. Ask which figures cover the site and which cover electricity generation. Comparing unlike totals can produce a dramatic headline without a useful answer.\n\n## “There are no benefits”—or “the jobs settle the argument”\n\nVirginia's legislative research commission found economic benefits in its 2024 review, particularly from construction and local tax revenue. It also found fewer ongoing workers than some other industries. A construction job count should not be presented as permanent staffing.\n\nThe same review documented potential electricity-cost increases and complaints about persistent noise near some homes. These are historical findings from one major market, not a verdict on every facility. They show why a local assessment should include residents' experience alongside investment totals. [Read the Virginia review](https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp).\n\n## What would make a proposal convincing?\n\nThese are our editorial questions, rather than claims that any particular developer has met the standard:\n\n- Is demand backed by a credible operating plan, with clear milestones?\n- Are infrastructure costs and risks assigned transparently?\n- Do water and noise assessments reflect the actual location and nearby residents?\n- Are promised jobs separated into construction and ongoing roles?\n- Can the community check performance after the project opens?\n\nThe hopeful part is that design, siting, measurement and public decisions can influence the outcome. Optimism is most useful when it makes those choices more concrete.\n",
+  "sources": [
+    {
+      "title": "IEA: Energy demand from AI",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+      "note": "2025 estimates and scenarios; all data centers."
+    },
+    {
+      "title": "IEA: Key Questions on Energy and AI",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+      "note": "2026 executive summary."
+    },
+    {
+      "title": "IEA: Data-centre electricity use surged in 2025",
+      "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+      "note": "April 16, 2026."
+    },
+    {
+      "title": "Berkeley Lab: 2024 US Data Center Energy Usage Report",
+      "url": "https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf",
+      "note": "Water estimates and definitions, PDF pages 54–55."
+    },
+    {
+      "title": "JLARC: Data Centers in Virginia",
+      "url": "https://jlarc.virginia.gov/landing-2024-data-centers-in-virginia.asp",
+      "note": "Archived 2024 report; not a statement of current law."
+    }
+  ],
+  "reviewed_sha256": "3e391556a27dbd78ecea181a8a5f901e15f2c080d9221a08a71bd968861a94fe"
+}

@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI, Actually — Newsroom</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5fa;color:#172336;font:16px/1.5 Arial,sans-serif}header{background:#172336;color:#fff;padding:20px 28px;display:flex;gap:24px;justify-content:space-between;align-items:center}h1{font:28px Georgia,serif;margin:0}button,input,textarea,select{font:inherit}button{border:1px solid #9aaac3;background:white;color:#172336;border-radius:5px;padding:10px 14px;cursor:pointer}button:hover{background:#e8eefc}button:disabled{opacity:.5;cursor:default}.primary{background:#2358dc;color:#fff;border-color:#2358dc}.primary:hover{background:#1945b5;color:#fff}input,textarea,select{width:100%;border:1px solid #aab6c8;border-radius:4px;padding:10px;background:#fff;color:#172336}textarea{resize:vertical;min-height:86px;line-height:1.55}label{display:block;margin-bottom:18px;font-weight:bold;font-size:14px}label input,label textarea{display:block;margin-top:6px;font-weight:normal;font-size:16px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:25px;max-width:1650px;margin:25px auto;padding:0 24px}.sidebar button{width:100%;text-align:left;margin-bottom:8px}.sidebar button.active{border:2px solid #2358dc}.sidebar small{display:block;color:#526078}.sidebar hr{border:0;border-top:1px solid #ccd5e2;margin:22px 0}.main{min-width:0}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;align-items:center;position:sticky;top:0;background:#f2f5fa;padding:12px 0;z-index:2}.status{background:#e8eefc;padding:6px 10px;font-size:14px}.editor{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,1fr);gap:24px}.paper{background:white;padding:26px;border:1px solid #d4dce8;border-radius:7px;min-width:0}.paper h2{font:28px Georgia,serif}.story{border-top:2px solid #dce4f1;margin-top:26px;padding-top:20px}.row{display:flex;gap:12px}.row>*{flex:1}iframe{width:100%;height:78vh;border:1px solid #c4cfde;background:white}.preview{position:sticky;top:85px;align-self:start;min-width:0}.preview nav{display:flex;gap:8px;margin-bottom:12px}details{margin:15px 0;padding:14px;background:#f4f6fa}summary{cursor:pointer;font-weight:bold}.source{border-left:3px solid #b5c4dd;padding-left:12px;margin-top:20px}pre{white-space:pre-wrap;font:14px/1.6 Arial,sans-serif;overflow-wrap:anywhere}#notice{padding:12px 26px;background:#fff3c6;border-bottom:1px solid #dfcc83}#notice:empty{display:none}.hint{font-size:14px;color:#526078}.danger{color:#a12727}a{color:#2358dc}button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #dba721;outline-offset:3px}@media(max-width:1100px){.editor{grid-template-columns:1fr}.preview{position:static}}@media(max-width:700px){.layout{grid-template-columns:1fr;padding:0 14px}.row{display:block}header{padding:16px;flex-wrap:wrap}.toolbar{position:static}.paper{padding:18px}iframe{height:65vh}}
+</style></head><body><header><h1>AI, Actually <span style="font:14px Arial;color:#bed0f2">/ Newsroom</span></h1><a href="/site/" target="_blank" rel="noopener" style="color:white">View published website ↗</a></header><div id="notice" role="status" aria-live="polite"></div><div class="layout"><aside class="sidebar"><h2 style="font-size:16px">Your editions &amp; explainers</h2><div id="items"></div><hr><label>Next issue date<input type="date" id="draft-date"></label><button id="generate" class="primary">Research a new draft</button><p class="hint" id="cadence"></p><p class="hint">Uses your signed-in Codex agent. Research runs in the background; published content stays unchanged.</p><details><summary>Setup status</summary><div id="setup"></div></details></aside><main class="main"><div class="toolbar"><span id="state" class="status">Choose an issue</span><button id="save" class="primary" disabled>Save edits</button><button id="approve" disabled>Approve this revision</button><button id="publish" disabled>Publish website</button><button id="kit" disabled>Prepare Kit draft</button></div><p class="hint">Publishing pushes a commit to your configured Amplify branch. Kit prepares an unsent email for review in Kit. No email is sent here.</p><div class="editor"><section class="paper" id="form"><p>Select an issue to start.</p></section><section class="preview"><nav aria-label="Preview format"><button id="web" aria-pressed="true">Website</button><button id="email" aria-pressed="false">Email</button><a id="reader" target="_blank" rel="noopener">Open reader preview ↗</a></nav><iframe id="preview" title="Issue preview" sandbox="allow-same-origin allow-popups"></iframe><p class="hint">Preview reflects the last saved version. Email typography and footer also depend on your selected Kit template.</p><details><summary>Research notes for the editor</summary><pre id="notes">No issue selected.</pre></details></section></div></main></div><script>
+const TOKEN="__TOKEN__";
+let current=null,revision="",dirty=false,mode="web",settings={},busy=false,lastJobMessage="";
+const $=id=>document.getElementById(id);
+function notice(text){$("notice").textContent=text}
+async function api(path,data){
+ const r=await fetch(path,data?{method:"POST",headers:{"Content-Type":"application/json","X-Newsroom-Token":TOKEN},body:JSON.stringify(data)}:{});
+ const d=await r.json();if(!r.ok)throw Error(d.error||"Request failed");return d
+}
+function changed(){dirty=true;$("state").textContent="Unsaved changes";buttons()}
+function buttons(){
+ const published=current?.status==="published";
+ $("save").disabled=!current||published||busy;
+ $("approve").disabled=!current||published||dirty||busy;
+ $("publish").disabled=!current||dirty||busy||!["reviewed","published"].includes(current.status);
+ $("kit").disabled=!current||current.kind!=="issue"||dirty||busy||!["reviewed","published"].includes(current.status)
+}
+function field(parent,obj,key,label,large=false){
+ const l=document.createElement("label");l.textContent=label;
+ const el=document.createElement(large?"textarea":"input");el.value=obj[key]??"";
+ if(large&&key==="body")el.rows=25;
+ el.disabled=current.status==="published";
+ el.oninput=()=>{obj[key]=el.value;changed()};l.append(el);parent.append(l);return el
+}
+function action(parent,label,fn){const b=document.createElement("button");b.textContent=label;b.disabled=current.status==="published";b.onclick=fn;parent.append(b);return b}
+function sourceFields(parent,sources){
+ sources.forEach((s,i)=>{const box=document.createElement("div");box.className="source";parent.append(box);
+ field(box,s,"title","Source title");field(box,s,"url","Direct source URL");field(box,s,"note","Evidence note",true);
+ action(box,"Remove source",()=>{sources.splice(i,1);changed();render()})});
+ action(parent,"Add source",()=>{sources.push({title:"",url:"",note:""});changed();render()})
+}
+function render(){
+ const f=$("form");f.replaceChildren();if(!current)return;
+ const h=document.createElement("h2");h.textContent=current.kind==="issue"?"Edit this issue":"Edit this explainer";f.append(h);
+ field(f,current,"title","Title");field(f,current,"description","Short introduction",true);
+ if(current.kind==="issue"){
+ field(f,current,"subject","Email subject");field(f,current,"intro","Opening note",true);
+ current.stories.forEach((s,i)=>{
+ const box=document.createElement("section");box.className="story";f.append(box);
+ const heading=document.createElement("h3");heading.textContent="Story "+(i+1);box.append(heading);
+ const controls=document.createElement("div");controls.className="row";box.append(controls);
+ if(i>0)action(controls,"Move up",()=>{[current.stories[i-1],current.stories[i]]=[s,current.stories[i-1]];changed();render()});
+ if(i<current.stories.length-1)action(controls,"Move down",()=>{[current.stories[i+1],current.stories[i]]=[s,current.stories[i+1]];changed();render()});
+ action(controls,"Remove story",()=>{current.stories.splice(i,1);changed();render()});
+ field(box,s,"title","Headline");field(box,s,"topic","Topic");
+ const l=document.createElement("label");l.textContent="Evidence stage";const sel=document.createElement("select");
+ ["Deployed use","Pilot","Research","Announcement"].forEach(v=>{const o=document.createElement("option");o.textContent=v;o.value=v;sel.append(o)});
+ sel.value=s.stage;sel.disabled=current.status==="published";sel.onchange=()=>{s.stage=sel.value;changed()};l.append(sel);box.append(l);
+ field(box,s,"summary","What happened",true);field(box,s,"ai_role","AI’s role",true);field(box,s,"why_it_matters","Why it matters",true);field(box,s,"caveat","What readers should keep in mind",true);
+ const details=document.createElement("details");const sum=document.createElement("summary");sum.textContent="Sources and timing";details.append(sum);box.append(details);
+ field(details,s,"source_date","Source publication date (YYYY-MM-DD)");field(details,s,"event_date","When the event happened");sourceFields(details,s.sources);
+ });
+ action(f,"Add a story",()=>{current.stories.push({title:"",topic:"",stage:"Research",source_date:current.window_end,event_date:"",summary:"",ai_role:"",why_it_matters:"",caveat:"",sources:[{title:"",url:"",note:""}]});changed();render()});
+ const factsHeading=document.createElement("h2");factsHeading.textContent="Two facts, with context";f.append(factsHeading);
+ if(!current.facts&&current.status!=="published")action(f,"Add the two fact cards",()=>{current.facts=["AI","Data centers"].map(topic=>({topic,title:"",claim:"",context:"",as_of:"",checked_on:"",sources:[{title:"",url:"",note:""}]}));changed();render()});
+ (current.facts||[]).forEach(fact=>{
+ const box=document.createElement("section");box.className="story";f.append(box);
+ const h=document.createElement("h3");h.textContent=fact.topic+" fact";box.append(h);
+ field(box,fact,"title","Short heading");field(box,fact,"claim","Sourced fact",true);field(box,fact,"context","Essential context",true);
+ field(box,fact,"as_of","Year, location or scope");field(box,fact,"checked_on","Source checked on (YYYY-MM-DD)");
+ sourceFields(box,fact.sources);
+ });
+ const extra=document.createElement("details");extra.innerHTML="<summary>Issue details</summary>";f.append(extra);
+ ["date","window_start","window_end","feature_slug"].forEach(k=>field(extra,current,k,k.replaceAll("_"," ")));
+ }else{field(f,current,"body","Article text (headings, links and lists supported)",true);sourceFields(f,current.sources)}
+ if(!dirty)$("state").textContent=current.status==="published"?"Published · read only":current.status==="reviewed"?"Reviewed · ready to publish":"Draft · needs review";
+ buttons()
+}
+async function load(slug){
+ if(dirty&&!confirm("Discard unsaved edits and open another item?"))return;
+ const d=await api("/api/item?slug="+encodeURIComponent(slug));current=d.item;revision=d.revision;dirty=false;
+ $("notes").textContent=d.notes||"No private research notes for this item.";render();preview()
+}
+function preview(){
+ if(!current)return;
+ $("reader").href="/api/preview?slug="+encodeURIComponent(current.slug)+"&reader=1"+(mode==="email"&&current.kind==="issue"?"&email=1":"");
+ $("reader").textContent=mode==="email"?"Open email preview ↗":"Open reader preview ↗";
+ $("preview").src="/api/preview?slug="+encodeURIComponent(current.slug)+(mode==="email"&&current.kind==="issue"?"&email=1":"");
+ $("web").setAttribute("aria-pressed",mode==="web");$("email").setAttribute("aria-pressed",mode==="email");$("email").disabled=current.kind!=="issue"
+}
+async function refresh(){
+ const data=await api("/api/items");settings=data.settings;
+ $("items").replaceChildren();
+ data.items.forEach(item=>{const b=document.createElement("button");if(item.slug===current?.slug)b.className="active";
+ b.textContent=item.title;const small=document.createElement("small");small.textContent=item.date+" · "+item.status;b.append(small);
+ b.onclick=()=>load(item.slug).catch(e=>notice(e.message));$("items").append(b)});
+ $("cadence").textContent="Default: "+settings.publication_day+" · "+settings.timezone+". Covers the previous seven complete days.";
+ $("setup").replaceChildren();
+ [["Website domain",settings.site_url],["Editorial contact",settings.contact_email],["Kit sender",settings.kit_email_address],["Kit template",settings.kit_email_template_id]].forEach(([l,v])=>{const p=document.createElement("p");p.className="hint";p.textContent=l+": "+(v?"Configured":"Not configured");$("setup").append(p)});
+ $("generate").disabled=data.job.running;
+ if(data.job.message&&data.job.message!==lastJobMessage){lastJobMessage=data.job.message;notice(data.job.message)}
+ if(!current&&data.items.length)await load(data.items.find(x=>x.status==="draft")?.slug||data.items[0].slug);
+ return data
+}
+async function mutate(path,extra={}){
+ busy=true;buttons();
+ try{
+ const d=await api(path,{slug:current.slug,revision,...extra});notice(d.message||"Done");
+ dirty=false;const slug=current.slug;await load(slug);await refresh()
+ }catch(e){notice(e.message)}finally{busy=false;buttons()}
+}
+$("save").onclick=()=>mutate("/api/save",{item:current});
+$("approve").onclick=()=>mutate("/api/approve");
+$("publish").onclick=()=>{if(confirm("Publish this reviewed revision to the website by committing and pushing to Amplify?"))mutate("/api/publish",{push:true})};
+$("kit").onclick=()=>mutate("/api/kit");
+$("web").onclick=()=>{mode="web";preview()};$("email").onclick=()=>{mode="email";preview()};
+$("generate").onclick=async()=>{try{const d=await api("/api/draft",{date:$("draft-date").value});notice(d.message);await refresh()}catch(e){notice(e.message)}};
+window.addEventListener("beforeunload",e=>{if(dirty){e.preventDefault();e.returnValue=""}});
+refresh().catch(e=>notice(e.message));
+setInterval(async()=>{try{const d=await api("/api/items");$("generate").disabled=d.job.running;if(d.job.running)notice(d.job.message);else if(!busy&&d.job.message&&d.job.message!==lastJobMessage){lastJobMessage=d.job.message;notice(d.job.message);if(!dirty)await refresh()}}catch{}},10000);
+</script></body></html>

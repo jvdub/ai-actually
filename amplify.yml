@@ -1,0 +1,10 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - python3 newsroom.py build --production
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'

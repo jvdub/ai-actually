@@ -1,0 +1,35 @@
+{
+  "slug": "2026-09-15",
+  "events": [
+    {
+      "event": "prepared_for_review",
+      "revision": "3a1d77c86c9a2214b4421cd68c3d3c527aeefb9cf7d243a6f79339fe1a783fcf",
+      "at": "2026-09-15T22:43:22.034851+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+      "at": "2026-09-16T02:31:47.748903+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+      "text": "Remove the public \"Two facts, with context\" heading. Let the two fact cards stand on their own while keeping them visually separate from the news.",
+      "at": "2026-09-16T03:25:19.017006+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+      "summary": "Removed the shared public heading from website, email, and plain text while preserving the separate fact-card presentation and topic labels.",
+      "at": "2026-09-16T03:25:19.017908+00:00"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+      "package": ".newsroom/releases/2026-09-15/37cf025dbe9bb8359e04c0cfa54ab7b71e0fa5659ed1455b90b1f40140af49ea",
+      "at": "2026-09-16T03:25:25.926398+00:00"
+    }
+  ],
+  "prepared_revision": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a",
+  "feedback_pending": false
+}

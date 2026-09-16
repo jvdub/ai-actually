@@ -1,0 +1,154 @@
+{
+  "slug": "2026-09-15",
+  "kind": "issue",
+  "number": "002",
+  "title": "Safer schools, lunar maps, and practical independence",
+  "description": "Five grounded signs of progress: stronger guardrails, open science, better research tools, and AI helping people act with more independence.",
+  "date": "2026-09-15",
+  "window_start": "2026-09-08",
+  "window_end": "2026-09-14",
+  "status": "reviewed",
+  "subject": "AI, Actually: safer schools, lunar maps, and practical independence",
+  "intro": "This week’s encouraging developments are concrete and varied: enforceable school privacy terms, an open model for lunar science, research aimed at making AI obey hard constraints, a laboratory discovery accelerated by AI, and two blind founders using it as an everyday accessibility tool. None settles the larger debates about AI. Together, they show what progress looks like when the benefit and the limit are both visible.",
+  "feature_slug": "data-centers-water-power",
+  "stories": [
+    {
+      "title": "School AI guardrails moved from principles into contracts",
+      "topic": "Student privacy",
+      "stage": "Announcement",
+      "source_date": "2026-09-09",
+      "event_date": "The agreement was announced September 9, 2026.",
+      "summary": "The American Federation of Teachers, United Federation of Teachers, and Microsoft announced a school AI safety and privacy standard that districts can add to Microsoft customer agreements. Its stated protections include barring use of student and educator data to train AI, requiring human oversight, and giving schools control over data use and deletion.",
+      "ai_role": "The agreement governs how Microsoft AI products may use data and operate in participating schools; AI is the subject of the guardrails, not the author of them.",
+      "why_it_matters": "Skepticism about AI in schools often centers on enforceability. Contract terms give districts a mechanism beyond voluntary promises.",
+      "caveat": "This is a newly announced agreement involving one vendor. Its real value will depend on adoption, contract language, enforcement, and how the protections work in practice.",
+      "sources": [
+        {
+          "title": "Microsoft Source · September 9, 2026",
+          "url": "https://news.microsoft.com/source/2026/09/09/aft-uft-and-microsoft-announce-national-ai-safety-privacy-standard-for-schools-to-protect-students-families-and-educators/",
+          "note": "Joint first-party announcement from Microsoft and the two unions; describes the protections and their intended contractual status."
+        }
+      ]
+    },
+    {
+      "title": "A new way to explore the Moon, open to everyone",
+      "topic": "Science",
+      "stage": "Announcement",
+      "source_date": "2026-09-10",
+      "event_date": "Public model release reported September 10, 2026.",
+      "summary": "NASA and IBM released an AI model for lunar research, along with code, datasets and benchmarks. It draws primarily on observations from the Lunar Reconnaissance Orbiter.",
+      "ai_role": "The model helps researchers analyze and map lunar surface data.",
+      "why_it_matters": "An open research tool lets more teams test ideas and build on shared scientific infrastructure.",
+      "caveat": "A released model is not a new lunar discovery. Its usefulness still depends on validation for each research task.",
+      "sources": [
+        {
+          "title": "NASA Science · September 10, 2026",
+          "url": "https://science.nasa.gov/science-research/artificial-intelligence-lunar-foundation-model/",
+          "note": "Agency announcement; code and model links are provided in the source."
+        },
+        {
+          "title": "NASA–IBM model collection on Hugging Face",
+          "url": "https://huggingface.co/collections/nasa-ibm-ai4science/nasa-ibm-lunar-fm-and-downstream-models",
+          "note": "Public collection containing the foundation model and downstream models; confirms that the release is accessible for testing."
+        }
+      ]
+    },
+    {
+      "title": "Teaching AI that some rules really are non-negotiable",
+      "topic": "Robotics",
+      "stage": "Research",
+      "source_date": "2026-09-14",
+      "event_date": "Research described by MIT on September 14, 2026.",
+      "summary": "MIT researchers introduced HardFlow, a method for steering generative models toward outputs that meet strict constraints. Reported experiments included robot motion, maze navigation and image editing.",
+      "ai_role": "The algorithm guides the generation process so its final answer meets specified requirements while also pursuing a useful objective.",
+      "why_it_matters": "For tasks such as avoiding an obstacle, a near miss is not good enough. Better constraint handling could make useful systems more dependable.",
+      "caveat": "Success in the reported experiments does not certify a deployed robot as safe or establish a guarantee for all AI systems.",
+      "sources": [
+        {
+          "title": "MIT News · September 14, 2026",
+          "url": "https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914",
+          "note": "Institutional research summary, with a link to the paper."
+        },
+        {
+          "title": "HardFlow paper record · IEEE TPAMI / PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42384531/",
+          "note": "Paper record and abstract for the reported hard-constrained sampling method; evidence is experimental, not deployed safety certification."
+        }
+      ]
+    },
+    {
+      "title": "AI helped biologists find a cellular off switch",
+      "topic": "Life science",
+      "stage": "Research",
+      "source_date": "2026-09-09",
+      "event_date": "The peer-reviewed paper and Cornell report were published September 9, 2026.",
+      "summary": "Cornell researchers used AlphaFold to narrow the search for proteins that interact with Arf1, a molecular switch involved in moving material inside cells. Laboratory experiments then confirmed that Avl9 switches Arf1 off and identified a broader family of related regulators.",
+      "ai_role": "AI predicted promising protein interactions; researchers tested the candidates in cells and supplied the biological evidence.",
+      "why_it_matters": "The work shows AI making exploratory biology more efficient while leaving the decisive step—experimental validation—in the laboratory.",
+      "caveat": "This is a basic cell-biology discovery, not a cancer treatment. The cancer connection concerns pathways and cell movement that may guide later research.",
+      "sources": [
+        {
+          "title": "Journal of Cell Biology · September 9, 2026",
+          "url": "https://rupress.org/jcb/article/225/11/e202601003/283007/Avl9-defines-a-family-of-DENN-domain-GTPase",
+          "note": "Peer-reviewed paper reporting computational interaction screening and functional experiments."
+        },
+        {
+          "title": "Cornell Chronicle · September 9, 2026",
+          "url": "https://news.cornell.edu/stories/2026/09/ai-reveals-new-class-cellular-switch-linked-cancer-pathways",
+          "note": "Institutional explanation of how AlphaFold guided the shortlist and how laboratory experiments confirmed the result."
+        }
+      ]
+    },
+    {
+      "title": "AI is becoming practical accessibility infrastructure",
+      "topic": "Accessibility",
+      "stage": "Deployed use",
+      "source_date": "2026-09-09",
+      "event_date": "OpenAI published the user story September 9, 2026; it describes ongoing use.",
+      "summary": "Bradford and Bryan Manning, blind founders of the nonprofit apparel company Two Blind Brothers, described using ChatGPT to interpret visual information, navigate, read menus and forms, work with spreadsheets, and help run their organization.",
+      "ai_role": "Voice, vision, and language features turn visual or text-heavy information into descriptions and answers the brothers can act on.",
+      "why_it_matters": "The benefit is immediate and ordinary: less dependence on another person for tasks that sighted people often complete without assistance.",
+      "caveat": "This is a company-published account from two users, not an independent accessibility study or evidence that the tool is consistently safe for navigation and other high-stakes tasks.",
+      "sources": [
+        {
+          "title": "OpenAI Stories · September 9, 2026",
+          "url": "https://openai.com/index/two-blind-brothers/",
+          "note": "First-party customer story with specific examples of use; claims are limited to the brothers’ reported experience."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "topic": "AI",
+      "title": "AI does more than generate text",
+      "claim": "AI systems can make predictions, recommendations and decisions. Chat-style answers are only one kind of output.",
+      "context": "A result from one tool does not tell us how every kind of AI performs; the task and system matter.",
+      "as_of": "NIST AI Risk Management Framework, 2023",
+      "checked_on": "2026-09-15",
+      "sources": [
+        {
+          "title": "NIST: AI Risk Management Framework — executive summary",
+          "url": "https://airc.nist.gov/airmf-resources/airmf/0-ai-rmf-1-0/",
+          "note": "Opening definition identifies predictions, recommendations and decisions as AI outputs. Context is editorial interpretation."
+        }
+      ]
+    },
+    {
+      "topic": "Data centers",
+      "title": "Data-center electricity is not all AI electricity",
+      "claim": "The IEA estimated that data centers used about 1.5% of the world's electricity in 2024. That figure covers data centers overall, including computing beyond AI.",
+      "context": "A small global share can still create a large local demand where facilities cluster.",
+      "as_of": "Global electricity use in 2024; IEA estimate published 2025",
+      "checked_on": "2026-09-15",
+      "sources": [
+        {
+          "title": "IEA: Energy demand from AI",
+          "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+          "note": "Sections on the outlook for data-center demand and regional demand distinguish conventional servers from AI-driven growth and explain geographic concentration."
+        }
+      ]
+    }
+  ],
+  "reviewed_sha256": "30769472282054865b689f8d259ea54b6d415a65b5167f7c87df197a8a5d6a1a"
+}

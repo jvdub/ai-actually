@@ -1,0 +1,5 @@
+.env
+.venv/
+.newsroom/
+__pycache__/
+*.pyc

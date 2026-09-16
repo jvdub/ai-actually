@@ -1,0 +1,27 @@
+{
+  "slug": "data-centers",
+  "kind": "feature",
+  "title": "Data centers: what the numbers actually tell us.",
+  "description": "Rising demand is real. So is the difference between a global percentage and the impact on one community.",
+  "date": "2026-09-14",
+  "status": "published",
+  "body": "**The useful distinction**\n\nAll data-center demand is not AI demand. A small global share can still place a large demand on a particular grid. Both facts belong in the conversation.\n\n## Start with the denominator\n\nThe IEA estimated that data centers consumed 415 terawatt-hours of electricity in 2024, about 1.5% of the world’s total. That figure covers data centers broadly, including services beyond AI. Calling all of it “AI electricity” changes what the number means. [Source](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai)\n\nIn its 2025 analysis, the IEA projected approximately 945 terawatt-hours by 2030 in its base case. This is a scenario, not a measurement of future demand. It is also a global estimate: it cannot tell a resident what a proposed facility will mean for their own community. [Source](https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai)\n\n## More efficient does not always mean less electricity\n\nThe IEA’s April 2026 update reported 17% growth in data-center electricity demand during 2025. It also described rapidly improving efficiency per AI task. Those findings can coexist when use expands and more demanding applications become common. [Source](https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions)\n\nEfficiency is progress worth pursuing. It is not, by itself, evidence that total consumption is falling.\n\n## The local questions are real\n\nThe same IEA update says large, concentrated loads can require new generation and grid investment. Electricity prices do not inevitably rise with demand, but policy and infrastructure choices matter. It also describes both renewable-energy agreements and projects pursuing on-site natural gas. A single “clean” or “dirty” label misses those differences. [Source](https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions)\n\nBerkeley Lab’s data-center work models electricity and water demand and examines cooling practices. Water deserves its own accounting: a power-demand figure alone cannot establish the water impact of a particular facility. [Source](https://eta.lbl.gov/data-centers)\n\n## Ask questions a project can answer\n\nOur interpretation: a more useful discussion starts with the specific facility and the assumptions behind its claims.\n\n- How much electricity is requested, and when will the load arrive?\n\n- Which grid upgrades are needed, and who pays for them?\n\n- What cooling system and water supply will be used?\n\n- Which benefits exist today, and which depend on future construction or technology?\n\nThere is room for optimism about better design and better planning. Neither removes the need to measure the costs where people live.",
+  "sources": [
+    {
+      "title": "IEA: Energy demand from AI",
+      "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+      "note": "2025 analysis."
+    },
+    {
+      "title": "IEA: 2026 update",
+      "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+      "note": "April 16, 2026."
+    },
+    {
+      "title": "Berkeley Lab: Data Centers",
+      "url": "https://eta.lbl.gov/data-centers",
+      "note": "Research overview."
+    }
+  ],
+  "reviewed_sha256": "808a5c2ffc0e9c4cdcfc095c35bf1a00bcf443c5fff71f9d819322c91176f9ef"
+}

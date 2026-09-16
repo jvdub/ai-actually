@@ -1,0 +1,53 @@
+{
+  "slug": "2026-09-14-pilot",
+  "kind": "issue",
+  "number": "001",
+  "title": "Good things are happening, too.",
+  "description": "A little perspective on the week in AI. The progress worth noticing, and the context worth keeping.",
+  "date": "2026-09-14",
+  "window_start": "2026-09-07",
+  "window_end": "2026-09-13",
+  "status": "published",
+  "subject": "Good things are happening, too.",
+  "intro": "Our original two-story pilot edition. Both stories draw on MIT reporting; this small sample is not a comprehensive survey of the week.",
+  "feature_slug": "data-centers",
+  "stories": [
+    {
+      "title": "A helping hand for medics, beyond the hospital",
+      "topic": "Medical technology",
+      "stage": "Announcement",
+      "source_date": "2026-09-11",
+      "event_date": "Award and technology-transfer update reported September 11; development predates this week.",
+      "summary": "AI-GUIDE combines handheld ultrasound with software that helps a user place a guidewire and catheter. MIT reported a technology-transfer award for the team behind it as the prototype moves toward commercialization.",
+      "ai_role": "AI assists the guidance process using ultrasound images.",
+      "why_it_matters": "The intended benefit is to make a demanding procedure more accessible to medics away from a hospital.",
+      "caveat": "This is a development and transfer update, not new evidence of lives saved at scale or proof of broad availability.",
+      "sources": [
+        {
+          "title": "MIT News · September 11, 2026",
+          "url": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+          "note": "First-party reporting from the developing institution."
+        }
+      ]
+    },
+    {
+      "title": "Helping teachers make AI less of a black box",
+      "topic": "Education",
+      "stage": "Pilot",
+      "source_date": "2026-09-09",
+      "event_date": "Workshop held in July 2026; report published September 9.",
+      "summary": "MIT described a weeklong summer pilot in which 19 higher-education participants explored teaching AI across disciplines and adapting materials for their classrooms.",
+      "ai_role": "AI is the subject of instruction, not an automated replacement for teachers.",
+      "why_it_matters": "Helping instructors explain and question AI could give students greater understanding and agency.",
+      "caveat": "A completed workshop does not yet establish improved student learning outcomes.",
+      "sources": [
+        {
+          "title": "MIT News · September 9, 2026",
+          "url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+          "note": "Institutional account, not independent evaluation."
+        }
+      ]
+    }
+  ],
+  "reviewed_sha256": "7cdda91fa591c668fea65763f51edbacc80d4275ce83d57949032aae1591e5ae"
+}
