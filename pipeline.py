@@ -54,7 +54,7 @@ def present(slug,root=p.ROOT):
         lines += [""]
     lines += ["## For your review","", "Editorial source review: "+st["editorial_review"],"",
               "[Full reader preview](http://localhost:4317/api/preview?slug="+slug+"&reader=1)",
-              "", "Please share any edits. This draft has not been approved, published or emailed."]
+              "", "Please share any final edits. This edition has not been published or emailed."]
     folder=root/".newsroom/review"/slug/p.fingerprint(d);folder.mkdir(parents=True,exist_ok=True)
     (folder/"draft.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
     p.write(folder/"content.json",d)
