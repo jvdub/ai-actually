@@ -5,9 +5,9 @@
   "timezone": "America/Denver",
   "publication_day": "Tuesday",
   "contact_email": "johnvwdev@gmail.com",
-  "signup_url": "",
+  "signup_url": "https://ai-actually.kit.com/3a6f3dc9ea",
   "git_remote": "origin",
   "git_branch": "main",
-  "kit_email_address": "",
-  "kit_email_template_id": 5043607
+  "kit_email_address": "ai@johnvw.dev",
+  "kit_email_template_id": 5527824
 }

@@ -129,16 +129,41 @@ def feature_body(d):
     return f'<main id="main" class="wrap"><section class="article-head"><a class="back" href="/features/">← All explainers</a><p class="eyebrow">A closer look · {esc(d["date"])}</p><h1>{esc(d["title"])}</h1><p class="dek">{esc(d["description"])}</p>'+('<span class="status">Unpublished draft</span>' if d["status"]!="published" else "")+'</section><article class="prose standalone">'+markdown(d["body"])+'<section class="sources"><h3>Sources</h3>'+sources_html(d["sources"])+'</section></article></main>'
 def email_html(d,cfg):
     base=cfg.get("site_url","").rstrip("/")
-    parts=[f'<h1>{esc(d["title"])}</h1>',f'<p>{esc(d["description"])}</p>',markdown(d["intro"])]
+    site=esc(base) if base else "#"
+    header=(
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-bottom:3px solid #172336;margin:0 0 30px"><tr><td style="padding:0 0 18px">'
+        '<a href="'+site+'" style="font-family:Georgia,Times New Roman,serif;font-size:30px;line-height:1;color:#172336;text-decoration:none;font-weight:bold">AI<span style="color:#2358dc">,</span> Actually<span style="color:#2358dc">.</span></a>'
+        '<div style="margin-top:8px;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#526078">Hope, with context.</div>'
+        '</td></tr></table>'
+    )
+    intro=(
+        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1.2px;text-transform:uppercase;color:#2358dc;margin:0 0 12px">The weekly roundup · '+esc(d["date"])+'</div>'
+        '<h1 style="font-family:Georgia,Times New Roman,serif;font-size:38px;line-height:1.12;letter-spacing:-.6px;font-weight:normal;color:#172336;margin:0 0 14px">'+esc(d["title"])+'</h1>'
+        '<p style="font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.55;color:#4a576b;margin:0 0 24px">'+esc(d["description"])+'</p>'
+        '<div style="font-size:17px;line-height:1.65;color:#172336;margin:0 0 32px">'+markdown(d["intro"])+'</div>'
+    )
+    stories=[]
     for s in d["stories"]:
-        parts += [f'<h2>{esc(s["title"])}</h2>',f'<p><small>{esc(s["topic"])} · {esc(s["stage"])}</small></p>',markdown(s["summary"]),'<p><strong>AI’s role:</strong> '+inline(s["ai_role"])+'</p>','<p><strong>Why it matters:</strong> '+inline(s["why_it_matters"])+'</p>','<p><strong>Keep in mind:</strong> '+inline(s["caveat"])+'</p>',sources_html(s["sources"])]
-    parts.append(facts_html(d.get("facts",[]),email=True))
+        stories.append(
+            '<div style="border-top:1px solid #c8ced7;padding:25px 0 7px">'
+            '<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase;color:#2358dc;margin:0 0 10px">'+esc(s["topic"])+' · '+esc(s["stage"])+'</div>'
+            '<h2 style="font-family:Georgia,Times New Roman,serif;font-size:27px;line-height:1.18;font-weight:normal;color:#172336;margin:0 0 14px">'+esc(s["title"])+'</h2>'
+            '<div style="font-size:16px;line-height:1.62;color:#172336">'+markdown(s["summary"])+'</div>'
+            '<p style="font-size:16px;line-height:1.6;margin:16px 0"><strong>AI’s role:</strong> '+inline(s["ai_role"])+'</p>'
+            '<p style="font-size:16px;line-height:1.6;margin:16px 0"><strong>Why it matters:</strong> '+inline(s["why_it_matters"])+'</p>'
+            '<div style="border-left:3px solid #2358dc;padding:4px 0 4px 14px;margin:19px 0 18px;color:#4a576b;font-size:15px;line-height:1.6"><strong style="color:#172336">Keep in mind:</strong> '+inline(s["caveat"])+'</div>'
+            '<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.55;color:#526078;margin:0 0 14px">'+sources_html(s["sources"])+'</div>'
+            '</div>'
+        )
+    facts='<div style="border-top:2px solid #2358dc;margin:30px 0 24px;padding-top:18px">'+facts_html(d.get("facts",[]),email=True)+'</div>'
+    links=""
     if base:
-        parts.append(f'<p><a href="{esc(base+route(d))}">Read this issue on the website</a></p>')
-        if d.get("feature_slug"):parts.append(f'<p><a href="{esc(base+"/features/"+d["feature_slug"]+"/")}">A closer look: this week’s featured explainer</a></p>')
-    parts.append("<p><small>AI, Actually · Hope, with context. Prepared with AI assistance; sources linked throughout.</small></p>")
-    # Kit's selected template supplies its own physical-address and unsubscribe footer.
-    return '<div style="max-width:640px;margin:auto;font:17px/1.6 Georgia,serif;color:#172336">'+"".join(parts)+"</div>"
+        links='<p style="margin:28px 0 10px"><a href="'+esc(base+route(d))+'" style="color:#2358dc;font-weight:bold;text-underline-offset:4px">Read this issue on the website →</a></p>'
+        if d.get("feature_slug"):
+            links+='<p style="margin:10px 0"><a href="'+esc(base+"/features/"+d["feature_slug"]+"/")+'" style="color:#2358dc;font-weight:bold;text-underline-offset:4px">A closer look: this week’s featured explainer →</a></p>'
+    closing='<div style="border-top:1px solid #c8ced7;margin-top:28px;padding-top:18px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.55;color:#526078">AI, Actually · Hope, with context.<br>Prepared with AI assistance; sources linked throughout.</div>'
+    return '<div style="max-width:640px;margin:0 auto;padding:30px 20px;font-family:Georgia,Times New Roman,serif;color:#172336;background:#ffffff">'+header+intro+"".join(stories)+facts+links+closing+'</div>'
+
 def build(root=ROOT,production=False):
     cfg=config(root)
     if production:
