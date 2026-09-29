@@ -1,0 +1,19 @@
+{
+  "revision": "844ba6e58712b86af701a250d2411e9b389e7330eed313115a9a12961b7e6676",
+  "reviewer": "AI editorial review using opened primary and research sources",
+  "checked_at": "2026-09-29T12:48:24.038203+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "NIST supports the human-oversight and responsibility claims; the survey supports the reject-option framing; Georgia Tech supports the research-stage surprise example. The draft distinguishes concepts, research, and implementation claims.",
+      "sources_checked": [
+        "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/",
+        "https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf",
+        "https://arxiv.org/abs/2304.04906",
+        "https://news.research.gatech.edu/2026/09/28/can-machine-or-ai-agent-be-surprised-helping-autonomous-systems-respond-unexpected"
+      ]
+    }
+  }
+}

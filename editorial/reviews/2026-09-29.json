@@ -1,0 +1,63 @@
+{
+  "revision": "e496943eac31bdbae6245b5cbe3304f614025edd5dc23e8b8894983eccbd4152",
+  "reviewer": "AI editorial review updated after adversarial review",
+  "checked_at": "2026-09-29T15:33:00.065800+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "story:0": {
+      "verdict": "supported",
+      "basis": "MIT and PubMed support the lexicon, clinician review and research framing, including accurate prediction in crisis-counseling conversations. They do not support clinical deployment or prevention outcomes; the draft limits its claim accordingly.",
+      "sources_checked": [
+        "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+        "https://pubmed.ncbi.nlm.nih.gov/42782714/"
+      ]
+    },
+    "story:1": {
+      "verdict": "supported",
+      "basis": "UF supports the announced research tool and intended prioritization use; outcomes remain unproven.",
+      "sources_checked": [
+        "https://ai.ufl.edu/ai-news/news-archive/"
+      ]
+    },
+    "story:2": {
+      "verdict": "supported",
+      "basis": "Rutgers, arXiv and repository support an open research workflow that emphasizes verification, not autonomous mathematics. The seminar is the in-window new event; the earlier preprint date is recorded in research notes.",
+      "sources_checked": [
+        "https://www.math.rutgers.edu/subscribe-to-events/eventdetail/23512/-/toward-reliable-ai-assisted-mathematics",
+        "https://arxiv.org/abs/2609.06283",
+        "https://github.com/proofQED/QED"
+      ]
+    },
+    "story:3": {
+      "verdict": "supported",
+      "basis": "Penn and the project overview support the MLEED project and its event-response tracking aims. Their country-coverage counts differ (71 versus 66); the draft flags that discrepancy and does not make causal claims.",
+      "sources_checked": [
+        "https://penntoday.upenn.edu/news/ai-model-shows-how-climate-events-drive-human-migration",
+        "https://web.sas.upenn.edu/mlp-devlab/environmental-event-and-tracking/overview/"
+      ]
+    },
+    "story:4": {
+      "verdict": "supported",
+      "basis": "Georgia Tech supports the Mutual Information Surprise framework and its research-stage, prospective applications. The draft does not claim demonstrated safety outcomes.",
+      "sources_checked": [
+        "https://news.research.gatech.edu/2026/09/28/can-machine-or-ai-agent-be-surprised-helping-autonomous-systems-respond-unexpected"
+      ]
+    },
+    "fact:0": {
+      "verdict": "supported",
+      "basis": "NIST defines training as learning model parameters from training data, and Google defines inference as using a trained model on new inputs. The plain-language distinction and caveat are accurate.",
+      "sources_checked": [
+        "https://csrc.nist.gov/glossary/term/training_stage",
+        "https://developers.google.com/machine-learning/glossary"
+      ]
+    },
+    "fact:1": {
+      "verdict": "supported",
+      "basis": "The IEA's April 2026 update reports that global data-center electricity demand rose 17% in 2025 and says AI-focused demand grew faster. The draft correctly describes the global scope and distinguishes falling per-task use from rising total demand.",
+      "sources_checked": [
+        "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions"
+      ]
+    }
+  }
+}

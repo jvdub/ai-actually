@@ -1,0 +1,164 @@
+{
+  "slug": "2026-09-29",
+  "kind": "issue",
+  "number": "003",
+  "title": "AI that helps people make the next decision",
+  "description": "This edition follows AI used to triage difficult information: crisis-text research, invasive-species management and mathematical verification, with honest context on data-center electricity demand.",
+  "date": "2026-09-29",
+  "status": "published",
+  "subject": "AI, Actually: AI that helps people make the next decision",
+  "intro": "This week's useful AI is mostly a way to make a hard next decision clearer. Researchers are testing interpretable signals in crisis conversations, conservation teams are using machine learning to prioritize invasive-species work, and mathematicians are building workflows that keep verification at the center. These are early and bounded uses, not substitutes for judgment.",
+  "window_start": "2026-09-22",
+  "window_end": "2026-09-28",
+  "feature_slug": "knowing-when-to-stop",
+  "stories": [
+    {
+      "title": "MIT researchers built an interpretable tool to study risk signals in crisis texts",
+      "topic": "Mental-health research",
+      "stage": "Research",
+      "source_date": "2026-09-24",
+      "event_date": "2026-09-24",
+      "summary": "MIT researchers reported a text-analysis tool that uses a clinician-reviewed lexicon to estimate risk levels in de-identified Crisis Text Line conversations. Their paper reports that the lightweight, interpretable model accurately predicted risk in crisis-counseling conversations, and the team released the lexicon and a package for building similar research tools.",
+      "ai_role": "The team used GPT-4 Turbo to draft candidate terms for 49 established suicide-risk factors, then had clinicians review the terms. A smaller lexicon-based model then identifies the signals behind a risk estimate instead of returning an unexplained score.",
+      "why_it_matters": "In high-stakes settings, a tool that shows the basis for a flag can be more useful to researchers and clinicians than a black box. The work could help study what people express during a crisis while preserving a role for professional judgment.",
+      "caveat": "This is not a clinical diagnosis tool or evidence that AI prevents suicide. It was evaluated on a particular crisis-text dataset and counselor-assessed categories; language is contextual, privacy protections matter, and the authors say further validation and human oversight are necessary before clinical use.",
+      "sources": [
+        {
+          "title": "MIT News: Estimating suicide risk from text",
+          "url": "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+          "note": "University research report, September 24, 2026; describes the data, model and limitations."
+        },
+        {
+          "title": "PubMed: The Suicide Risk Lexicon",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42782714/",
+          "note": "Primary article record, published September 24, 2026; supports the method and evaluation framing."
+        }
+      ]
+    },
+    {
+      "title": "Florida researchers use machine learning to focus invasive-python control",
+      "topic": "Conservation",
+      "stage": "Research",
+      "source_date": "2026-09-28",
+      "event_date": "2026-09-28",
+      "summary": "University of Florida researchers described a tool that combines demographic information with machine learning to identify Burmese pythons that have the greatest influence on future population growth and to estimate when the snakes are most likely to be detected. The goal is to help agencies focus scarce removal effort where it may have the most effect.",
+      "ai_role": "Machine learning is used alongside demographic modeling to estimate detectability and to prioritize individual pythons by their expected influence on future population growth.",
+      "why_it_matters": "Invasive-species work takes time, field knowledge and money. Better prioritization could help teams direct effort toward animals and moments where removal has more value, rather than treating every search as equally likely to help.",
+      "caveat": "The university announcement describes a research tool, not demonstrated population-level control. Its benefit will depend on field validation, model assumptions, local conditions and the capacity of agencies to act on the recommendations.",
+      "sources": [
+        {
+          "title": "University of Florida AI News Archive: Burmese python study",
+          "url": "https://ai.ufl.edu/ai-news/news-archive/",
+          "note": "University archive entry dated September 28, 2026; supports the stated tool and intended use."
+        }
+      ]
+    },
+    {
+      "title": "An open-source workflow puts proof verification beside AI-assisted mathematics",
+      "topic": "Science and reproducibility",
+      "stage": "Research",
+      "source_date": "2026-09-23",
+      "event_date": "2026-09-23",
+      "summary": "At Rutgers' AI and Mathematics Seminar, Columbia researcher Qihao Ye presented QED, an open-source multi-agent workflow for literature review, proof development and verification. The accompanying case study describes using AI-assisted search with a researcher's own mathematical insight and rigorous verification to construct Carleman weights for a wave-equation problem.",
+      "ai_role": "QED coordinates AI-assisted search and proof-development tasks while keeping formal or rigorous verification as part of the workflow. Its code and case-study paper are publicly available.",
+      "why_it_matters": "Mathematical work depends on being able to check a result, not merely generate plausible prose. Tools built around verification could help individual researchers use AI assistance while retaining the practices that make a proof trustworthy.",
+      "caveat": "This is a case study and seminar presentation, not evidence that AI can reliably solve arbitrary mathematical problems. The organizers explicitly frame human insight and rigorous verification as necessary, and the workflow's reliability needs broader independent evaluation.",
+      "sources": [
+        {
+          "title": "Rutgers: Toward Reliable AI-Assisted Mathematics",
+          "url": "https://www.math.rutgers.edu/subscribe-to-events/eventdetail/23512/-/toward-reliable-ai-assisted-mathematics",
+          "note": "Seminar record dated September 23, 2026; links the project and case-study paper."
+        },
+        {
+          "title": "arXiv: Toward Reliable AI-Assisted Mathematics",
+          "url": "https://arxiv.org/abs/2609.06283",
+          "note": "Authors' case-study preprint; primary technical source."
+        },
+        {
+          "title": "QED source code",
+          "url": "https://github.com/proofQED/QED",
+          "note": "Project repository referenced by the seminar record."
+        }
+      ]
+    },
+    {
+      "title": "Penn researchers used AI to map climate events and migration signals",
+      "topic": "Climate adaptation",
+      "stage": "Research",
+      "source_date": "2026-09-25",
+      "event_date": "2026-09-25",
+      "summary": "University of Pennsylvania researchers described MLEED, a machine-learning project that draws on about 130 million locally sourced news articles from 71 countries to track environmental events and social responses over time. The project is meant to help researchers and policymakers study how floods, droughts and other shocks are associated with displacement, food prices and migration.",
+      "ai_role": "Machine learning organizes large volumes of local reporting into a dataset that links environmental events with social responses across places and time.",
+      "why_it_matters": "Climate adaptation decisions are often made with incomplete information about how environmental shocks affect communities. A structured, public-facing evidence base could help planners identify patterns earlier and prepare support for people at risk of displacement.",
+      "caveat": "The project identifies associations in reporting and other data; it does not prove that a particular event caused a particular migration decision. News coverage is uneven. Penn's September news report describes 71 countries, while the project's overview page currently lists 66 countries, so its current coverage count needs reconciliation before policy use.",
+      "sources": [
+        {
+          "title": "Penn Today: An AI model shows how climate events drive human migration",
+          "url": "https://penntoday.upenn.edu/news/ai-model-shows-how-climate-events-drive-human-migration",
+          "note": "University report dated September 25, 2026; supports the data scope, described uses and research limits."
+        },
+        {
+          "title": "MLEED project overview",
+          "url": "https://web.sas.upenn.edu/mlp-devlab/environmental-event-and-tracking/overview/",
+          "note": "Project page; lists the data sources, event and response categories, and a current 66-country coverage figure that differs from Penn's September news report of 71."
+        }
+      ]
+    },
+    {
+      "title": "Georgia Tech researchers are teaching autonomous systems when to stop and reassess",
+      "topic": "Reliable autonomy",
+      "stage": "Research",
+      "source_date": "2026-09-28",
+      "event_date": "2026-09-28",
+      "summary": "Georgia Tech researchers introduced Mutual Information Surprise, a framework intended to help autonomous systems distinguish meaningful unexpected events from merely rare ones. The team says the approach could eventually help an AI assistant, robot or automated factory decide when its current understanding is inadequate and it should reassess.",
+      "ai_role": "The framework measures an agent's gain in knowledge from new information, aiming to flag surprises that should trigger a change in reasoning or action.",
+      "why_it_matters": "A safer autonomous system needs a way to recognize the edge of what it understands. Research that makes a system more likely to pause, surface uncertainty or seek a different response could support more reliable use in real-world settings.",
+      "caveat": "This is an early research framework, not a demonstrated safety system. Whether it improves outcomes depends on implementation, testing in specific environments and the safeguards that determine what the system does after it flags surprise.",
+      "sources": [
+        {
+          "title": "Georgia Tech: Can a Machine or AI Agent Be Surprised?",
+          "url": "https://news.research.gatech.edu/2026/09/28/can-machine-or-ai-agent-be-surprised-helping-autonomous-systems-respond-unexpected",
+          "note": "University report dated September 28, 2026; describes the framework, intended applications and research-stage status."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "topic": "AI",
+      "title": "Training and inference are different stages of a machine-learning system",
+      "claim": "During training, a machine-learning system adjusts a model's parameters using examples. During inference, the trained model applies those learned parameters to a new input to make a prediction or generate a response.",
+      "context": "That distinction explains why a chatbot does not normally learn from a single conversation as it answers it. A model can still be updated later through a separate training or fine-tuning process, and both stages can introduce errors or bias.",
+      "as_of": "Foundational machine-learning concept",
+      "checked_on": "2026-09-29",
+      "sources": [
+        {
+          "title": "NIST glossary: training stage",
+          "url": "https://csrc.nist.gov/glossary/term/training_stage",
+          "note": "Official definition of training as learning model parameters from training data."
+        },
+        {
+          "title": "Google Machine Learning Glossary: inference",
+          "url": "https://developers.google.com/machine-learning/glossary",
+          "note": "Defines inference as applying a trained model to make predictions; for LLMs, generating a response to a prompt."
+        }
+      ]
+    },
+    {
+      "topic": "Data centers",
+      "title": "Global data-center electricity use rose 17% in 2025",
+      "claim": "The International Energy Agency reported that electricity demand from data centers rose 17% in 2025, while demand from AI-focused data centers grew faster.",
+      "context": "This is a global year-over-year growth figure for all data centers, not a direct measure of a single AI query or a local utility's load. The IEA also says power consumption per AI task is declining, while wider use and more energy-intensive applications are increasing total demand.",
+      "as_of": "2025 global electricity demand; reported April 2026",
+      "checked_on": "2026-09-29",
+      "sources": [
+        {
+          "title": "IEA: Data centre electricity use surged in 2025",
+          "url": "https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions",
+          "note": "IEA release dated April 16, 2026; supports the 17% 2025 growth figure and the distinction between per-task efficiency and total demand."
+        }
+      ]
+    }
+  ],
+  "reviewed_sha256": "e496943eac31bdbae6245b5cbe3304f614025edd5dc23e8b8894983eccbd4152"
+}
