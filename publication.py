@@ -89,6 +89,15 @@ def validate(d):
             if not start<=date.fromisoformat(s["source_date"])<=end: raise ValueError("Story source date outside the issue window: "+s["title"])
             if s["title"] in seen:raise ValueError("Duplicate story title")
             seen.add(s["title"]);check_sources(s["sources"])
+        if "historical_story" in d:
+            s=d["historical_story"]
+            if not isinstance(s,dict):raise ValueError("Historical story must be an object")
+            for k in ("title","topic","stage","source_date","event_date","summary","ai_role","why_it_matters","caveat","sources"):
+                if not s.get(k):raise ValueError("Historical story needs "+k)
+            if s["stage"] not in STAGES:raise ValueError("Unknown historical evidence stage")
+            if date.fromisoformat(s["source_date"])>=date(2026,9,1):raise ValueError("Historical story must predate September 2026")
+            if s["title"] in seen:raise ValueError("Historical story repeats a current story")
+            check_sources(s["sources"])
     elif d["kind"]=="feature":
         if not d.get("body"):raise ValueError("Feature needs body")
         check_sources(d.get("sources",[]))
@@ -124,7 +133,12 @@ def issue_body(d,features=None,preview=False):
     aside+=facts_html(d.get("facts",[]))
     aside+='<div class="note"><strong>Optimistic. Eyes open.</strong><p>Benefits, possibilities, and limitations belong together. <a href="/standards/">How we choose stories</a>.</p></div></aside>'
     badge="Unpublished draft" if d["status"]!="published" else "Weekly edition"
-    return f'''<main id="main" class="wrap"><div class="edition"><span>Issue {esc(d.get("number",""))} · {esc(d["window_start"])} – {esc(d["window_end"])}</span><span class="status">{badge}</span></div><section class="intro"><div class="eyebrow">The weekly roundup · {esc(d["date"])}</div><h1>{esc(d["title"])}</h1><p class="dek">{esc(d["description"])}</p>{markdown(d["intro"])}</section><div class="grid"><section aria-label="This week's stories"><div class="section-title"><span>Worth your attention</span><span>{len(d["stories"])} stories</span></div>{"".join(story_html(s,i) for i,s in enumerate(d["stories"]))}</section>{aside}</div><p class="note">Prepared with AI assistance. Sources and evidence limits are disclosed in each story.</p></main>'''
+    historical=d.get("historical_story")
+    current='<section aria-label="This week\'s stories"><div class="section-title"><span>Worth your attention</span><span>'+str(len(d["stories"]))+(' current stories' if historical else ' stories')+'</span></div>'+"".join(story_html(s,i) for i,s in enumerate(d["stories"]))+'</section>'
+    if historical:
+        archive='<section aria-label="From the archive"><div class="section-title"><span>From the archive</span><span>'+esc(historical["source_date"][:4])+'</span></div>'+story_html(historical,len(d["stories"]))+'</section>'
+        current='<div>'+current+archive+'</div>'
+    return f'''<main id="main" class="wrap"><div class="edition"><span>Issue {esc(d.get("number",""))} · {esc(d["window_start"])} – {esc(d["window_end"])}</span><span class="status">{badge}</span></div><section class="intro"><div class="eyebrow">The weekly roundup · {esc(d["date"])}</div><h1>{esc(d["title"])}</h1><p class="dek">{esc(d["description"])}</p>{markdown(d["intro"])}</section><div class="grid">{current}{aside}</div><p class="note">Prepared with AI assistance. Sources and evidence limits are disclosed in each story.</p></main>'''
 def feature_body(d):
     return f'<main id="main" class="wrap"><section class="article-head"><a class="back" href="/features/">← All explainers</a><p class="eyebrow">A closer look · {esc(d["date"])}</p><h1>{esc(d["title"])}</h1><p class="dek">{esc(d["description"])}</p>'+('<span class="status">Unpublished draft</span>' if d["status"]!="published" else "")+'</section><article class="prose standalone">'+markdown(d["body"])+'<section class="sources"><h3>Sources</h3>'+sources_html(d["sources"])+'</section></article></main>'
 def email_html(d,cfg):
@@ -143,7 +157,10 @@ def email_html(d,cfg):
         '<div style="font-size:17px;line-height:1.65;color:#172336;margin:0 0 32px">'+markdown(d["intro"])+'</div>'
     )
     stories=[]
-    for s in d["stories"]:
+    historical=d.get("historical_story")
+    for s in d["stories"]+([historical] if historical else []):
+        if s is historical:
+            stories.append('<div style="border-top:2px solid #2358dc;margin:32px 0 0;padding-top:18px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1.2px;text-transform:uppercase;color:#2358dc">From the archive · '+esc(s["source_date"][:4])+'</div>')
         stories.append(
             '<div style="border-top:1px solid #c8ced7;padding:25px 0 7px">'
             '<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:.7px;text-transform:uppercase;color:#2358dc;margin:0 0 10px">'+esc(s["topic"])+' · '+esc(s["stage"])+'</div>'

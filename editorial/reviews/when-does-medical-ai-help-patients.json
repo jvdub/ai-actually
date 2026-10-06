@@ -1,0 +1,23 @@
+{
+  "revision": "e07595b72c4cb6f1ce90a3fba68c1da404aebed169ff4d1563bd05e6aa7ea15b",
+  "reviewer": "AI editorial review of opened primary research, clinical-trial abstracts, and institutional guidance",
+  "checked_at": "2026-10-06T12:52:03Z",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "The October 1 ICU paper supports a ten-patient retrospective forecasting result and explicitly does not measure outcomes. MASAI primary trial abstract supports higher sensitivity and interval-cancer non-inferiority, not superiority or survival. The Kenyan randomized trial supports improved notes but no significant 14-day treatment-failure difference. The Taiwan ECG primary abstract supports lower 90-day mortality for its alert-and-clinician workflow, with generalizability limited. WHO, DECIDE-AI and the 2026 evaluation framework support separating validation, workflow evaluation and clinical outcomes. FDA page supports monitoring but explicitly is not guidance. Draft keeps these distinctions.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s44324-026-00132-2",
+        "https://www.nature.com/articles/s41746-026-03155-7",
+        "https://www.who.int/publications/i/item/9789240038462",
+        "https://discovery.ucl.ac.uk/id/eprint/10152188/",
+        "https://pubmed.ncbi.nlm.nih.gov/41620232/",
+        "https://www.nature.com/articles/s41591-026-04503-6",
+        "https://www.nature.com/articles/s41591-024-02961-4",
+        "https://www.fda.gov/medical-devices/digital-health-center-excellence/request-public-comment-measuring-and-evaluating-artificial-intelligence-enabled-medical-device"
+      ]
+    }
+  }
+}

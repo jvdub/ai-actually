@@ -169,6 +169,24 @@ class Workflow(unittest.TestCase):
         plain=(self.root/".newsroom/email"/(self.slug+".txt")).read_text()
         self.assertIn(d["facts"][0]["claim"],plain)
 
+    def test_historical_story_is_distinct_in_review_site_and_email(self):
+        _,issue=n.find_item('2026-10-06',self.root)
+        self.assertEqual(len(issue['stories']),4)
+        self.assertEqual(issue['historical_story']['source_date'],'2024-02-05')
+        p.validate(issue)
+        self.assertIn('historical_story',flow.targets(issue))
+        self.assertIn('From the archive',p.issue_body(issue))
+        self.assertIn(issue['historical_story']['title'],p.issue_body(issue))
+        self.assertIn('From the archive',p.email_html(issue,p.config(self.root)))
+        n.export_email('2026-10-06',self.root)
+        plain=(self.root/'.newsroom/email/2026-10-06.txt').read_text()
+        self.assertIn('From the archive (2024)',plain)
+        self.assertIn(issue['historical_story']['title'],plain)
+        self.assertIn('/features/when-does-medical-ai-help-patients/',plain)
+        self.assertIn('From the archive (2024)',flow.present('2026-10-06',self.root).read_text())
+        issue['historical_story']['source_date']='2026-09-01'
+        with self.assertRaisesRegex(ValueError,'predate September 2026'):p.validate(issue)
+
     def test_editorial_gate_requires_current_evidence_and_feedback_resolution(self):
         flow.review_path(self.slug,self.root).unlink()
         with self.assertRaisesRegex(ValueError,"source review"):n.approve(self.slug,self.root)

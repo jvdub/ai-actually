@@ -5,7 +5,7 @@ The user delegates research, drafting, evidence review, presentation and revisio
 ## Weekly run
 The thread automation runs Tuesday at 09:00 America/Denver. Use the scheduled issue date and seven preceding complete calendar days. A late run uses the latest scheduled date; report that it is late rather than silently shifting the window. Never overwrite an existing issue, feedback or pending edition. Check pipeline.py status and the recorded prepared revision and conversation history first.
 
-Read editorial/brief.md. Choose the research method freely: research directly with available tools, or use newsroom.py draft. Prefer primary evidence and seek counterevidence; verify consequential claims against underlying research rather than press-release wording alone. Produce the issue and two facts. Review the complete draft against its sources in a separate editorial pass, including dates, actual AI contribution, benefit, limits, quantitative scope and possible repeats. Remove unsupported claims. If only a few strong items qualify, use fewer. Sources and source-check dates must be real.
+Read editorial/brief.md. Keep current stories within the seven-day window and put the single pre-September-2026 historical item in historical_story, separate from stories. Check previous archive picks for repeats; leave the historical slot empty rather than use a weak example. Choose the research method freely: research directly with available tools, or use newsroom.py draft. Prefer primary evidence and seek counterevidence; verify consequential claims against underlying research rather than press-release wording alone. Produce the issue and two facts. Review the complete draft against its sources in a separate editorial pass, including dates, actual AI contribution, benefit, limits, quantitative scope and possible repeats. Remove unsupported claims. If only a few strong items qualify, use fewer. Sources and source-check dates must be real.
 
 ## Evidence record
 Save editorial/reviews/ISSUE.json tied to publication.fingerprint(issue):
@@ -15,7 +15,7 @@ Save editorial/reviews/ISSUE.json tied to publication.fingerprint(issue):
 - verdict: ready or needs_revision
 - unresolved: array of remaining material concerns
 - checks: one entry for every story:0, story:1, etc. and fact:0, fact:1; a feature uses feature.
-Each check has verdict (supported or needs_revision), basis (specific assessment of what the evidence supports and the limits), and sources_checked (the direct URLs actually opened and assessed). Refer to source passages/sections in basis; do not store copyrighted articles. A ready record means assessed support, not certainty or independent verification. Mechanical validation checks completeness and revision alignment, not truth.
+Each check has verdict (supported or needs_revision), basis (specific assessment of what the evidence supports and the limits), and sources_checked (the direct URLs actually opened and assessed). An issue with historical_story also needs a historical_story check. Refer to source passages/sections in basis; do not store copyrighted articles. A ready record means assessed support, not certainty or independent verification. Mechanical validation checks completeness and revision alignment, not truth.
 
 Run python3 pipeline.py check-review ISSUE. Approval requires a current ready report covering every item and no unresolved feedback. Do not create a ready record just to satisfy the check.
 

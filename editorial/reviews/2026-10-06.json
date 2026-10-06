@@ -1,0 +1,62 @@
+{
+  "revision": "229d0b7975830ee093cb126246bf710188f8eaf4669af85d7a89f75b938d391c",
+  "reviewer": "AI editorial review of current issue, feature linkage, and opened archive sources",
+  "checked_at": "2026-10-06T14:52:05Z",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "story:0": {
+      "verdict": "supported",
+      "basis": "Primary Nature paper supports functional binder and detection experiments; Nature News supplies counterevidence on watermark removal.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41586-026-10965-y",
+        "https://www.nature.com/articles/d41586-026-03033-y"
+      ]
+    },
+    "story:1": {
+      "verdict": "supported",
+      "basis": "MIT report supports an announced three-year project and intended decision-support role; no deployment or rider impact is claimed.",
+      "sources_checked": [
+        "https://news.mit.edu/2026/mit-transit-lab-to-develop-ai-platform-public-transit-agencies-0930"
+      ]
+    },
+    "story:2": {
+      "verdict": "supported",
+      "basis": "The October 1 primary paper abstract and Results support retrospective 15–30 minute forecasts on ten septic ICU patients with diabetes and adaptation within seconds on a laptop. Its Discussion states this is proof of concept, longer-horizon error increases, continuous-glucose measurements need clinical validation, and no treatment or outcome benefit was tested; the draft states these limits.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s44324-026-00132-2"
+      ]
+    },
+    "story:3": {
+      "verdict": "supported",
+      "basis": "MIT report supports the system design and the selected novice evaluation; the caveat records absent physics/material validation.",
+      "sources_checked": [
+        "https://news.mit.edu/2026/instructmesh-tool-lets-users-repair-ai-3d-models-then-fabricate-them-1001"
+      ]
+    },
+    "fact:0": {
+      "verdict": "supported",
+      "basis": "Google and IBM explain retrieval plus prompt augmentation; context makes clear this is not training or a correctness guarantee.",
+      "sources_checked": [
+        "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+        "https://www.ibm.com/think/topics/retrieval-augmented-generation"
+      ]
+    },
+    "fact:1": {
+      "verdict": "supported",
+      "basis": "DOE guide section 8.1 gives the formula and explicitly limits PUE to infrastructure efficiency.",
+      "sources_checked": [
+        "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf"
+      ]
+    },
+    "historical_story": {
+      "verdict": "supported",
+      "basis": "University of Kentucky February 5, 2024 report documents the 2023 challenge result, 15 partial columns and papyrologist assessment. Oxford February 2025 account of related work limits the AI role to ink detection while scholars read and interpret text. NEH corroborates readable passages in 2023–2024. The item is visibly labeled as historical, distinguishes result and report dates, and does not claim full-scroll decipherment.",
+      "sources_checked": [
+        "https://uknow.uky.edu/node/241986",
+        "https://www.ox.ac.uk/news/2025-02-07-inside-herculaneum-scroll-seen-first-time-almost-2000-years",
+        "https://www.neh.gov/project/reading-invisible-library-herculaneum-papyrus-scrolls"
+      ]
+    }
+  }
+}

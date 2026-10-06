@@ -1,0 +1,32 @@
+{
+  "slug": "2026-10-06",
+  "events": [
+    {
+      "event": "prepared_for_review",
+      "revision": "36acfd4a05bf0516314c3c6a43825fd626210f42e52ad3cda1582005548e634d",
+      "at": "2026-10-06T08:04:08.321718+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "7a8d61856d37cc6713b95d32b97da83787dcd5690a1af7eca54914d42a02f6ac",
+      "at": "2026-10-06T12:37:27.969499+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "035171842aa8776f7a2b5934319dd0b980d0c18cc7165acad577892931e67ad3",
+      "at": "2026-10-06T12:52:04.690313+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "229d0b7975830ee093cb126246bf710188f8eaf4669af85d7a89f75b938d391c",
+      "at": "2026-10-06T14:52:06.275524+00:00"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "229d0b7975830ee093cb126246bf710188f8eaf4669af85d7a89f75b938d391c",
+      "package": ".newsroom/releases/2026-10-06/9fe63c3a56c8b7779c90961cae0587f17d67d0e3a7f4ce56ea9e7b20057da1d3",
+      "at": "2026-10-06T15:59:43.528866+00:00"
+    }
+  ],
+  "prepared_revision": "229d0b7975830ee093cb126246bf710188f8eaf4669af85d7a89f75b938d391c"
+}

@@ -15,7 +15,7 @@ def state(slug,root=p.ROOT):
     return p.read(path) if path.exists() else {"slug":slug,"events":[]}
 def targets(d):
     if d["kind"]=="feature":return {"feature":d["sources"]}
-    return {**{"story:"+str(i):s["sources"] for i,s in enumerate(d["stories"])},**{"fact:"+str(i):f["sources"] for i,f in enumerate(d.get("facts",[]))}}
+    return {**{"story:"+str(i):s["sources"] for i,s in enumerate(d["stories"])},**({"historical_story":d["historical_story"]["sources"]} if d.get("historical_story") else {}),**{"fact:"+str(i):f["sources"] for i,f in enumerate(d.get("facts",[]))}}
 def check_review(slug,root=p.ROOT):
     _,d=item(slug,root);p.validate(d)
     path=review_path(slug,root)
@@ -45,6 +45,11 @@ def present(slug,root=p.ROOT):
     lines=["# "+d["title"],"",d["window_start"]+" through "+d["window_end"],"",d["intro"],""]
     for story in d["stories"]:
         lines += ["## "+story["title"],"",story["summary"],"","**AI's role:** "+story["ai_role"],"","**Why it matters:** "+story["why_it_matters"],"","**Keep in mind:** "+story["caveat"],""]
+        lines += ["- ["+x["title"]+"]("+x["url"]+")" for x in story["sources"]]
+        lines += [""]
+    if d.get("historical_story"):
+        story=d["historical_story"]
+        lines += ["## From the archive ("+story["source_date"][:4]+"): "+story["title"],"",story["summary"],"","**AI's role:** "+story["ai_role"],"","**Why it matters:** "+story["why_it_matters"],"","**Keep in mind:** "+story["caveat"],""]
         lines += ["- ["+x["title"]+"]("+x["url"]+")" for x in story["sources"]]
         lines += [""]
     lines += ["## Two facts, with context",""]

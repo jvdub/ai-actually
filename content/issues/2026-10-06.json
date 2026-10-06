@@ -1,0 +1,159 @@
+{
+  "slug": "2026-10-06",
+  "kind": "issue",
+  "number": "004",
+  "title": "Promising tools, with the limits in view",
+  "description": "Four current AI developments, one verified breakthrough from the archive, and two facts about AI and data centers.",
+  "date": "2026-10-06",
+  "status": "published",
+  "subject": "AI, Actually: Promising tools, with the limits in view",
+  "intro": "This week starts with a concrete way to identify AI-designed proteins, then a public-transit project aimed at giving staff better information during disruptions. A small ICU study and a 3D-design tool show other possibilities. None is a proven large-scale benefit yet. After the current stories, a new From the archive section looks back to a 2024 recovery of ancient writing with AI-assisted imaging.",
+  "window_start": "2026-09-29",
+  "window_end": "2026-10-05",
+  "feature_slug": "when-does-medical-ai-help-patients",
+  "stories": [
+    {
+      "title": "A protein watermark offers a test of AI design provenance",
+      "topic": "Biology and provenance",
+      "stage": "Research",
+      "source_date": "2026-09-30",
+      "event_date": "2026-09-30",
+      "summary": "Google DeepMind researchers reported SynthIDBio, methods for embedding detectable marks into AI-designed protein sequences and structures. In lab demonstrations, marked protein binders retained comparable binding to unmarked versions, while the mark could be detected accurately.",
+      "ai_role": "The watermark is integrated into the AI protein-design workflow so later checks can identify a design's origin.",
+      "why_it_matters": "Provenance could help research databases and biological suppliers understand where designs came from as AI-designed molecules become more common.",
+      "caveat": "This is proof-of-concept work, not a deployed biosecurity guarantee. Nature reported that some redesign methods can erase the mark, and provenance alone says nothing about whether a protein is safe.",
+      "sources": [
+        {
+          "title": "Nature: Function-preserving watermarking of AI-generated proteins",
+          "url": "https://www.nature.com/articles/s41586-026-10965-y",
+          "note": "Primary paper published September 30; experimental claims and proof-of-concept framing."
+        },
+        {
+          "title": "Nature News: Secret watermark labels proteins as made by AI",
+          "url": "https://www.nature.com/articles/d41586-026-03033-y",
+          "note": "Independent report explaining removability of the mark."
+        }
+      ]
+    },
+    {
+      "title": "MIT is building an open tool to help transit control rooms use their data",
+      "topic": "Public transit",
+      "stage": "Announcement",
+      "source_date": "2026-09-30",
+      "event_date": "2026-09-30",
+      "summary": "MIT Transit Lab announced a three-year project to build an open-source Public Transit Intelligence Hub for agency staff. It aims to bring fragmented monitoring, operations and rider-communication data together so staff can respond to disruptions with better information.",
+      "ai_role": "Planned predictive models, optimization tools and language-model reasoning would organize operational information and offer decision support while agency staff retain authority.",
+      "why_it_matters": "Better coordination could eventually mean clearer rider updates and faster responses when buses or trains are disrupted.",
+      "caveat": "This is a funded project, not a deployed service or measured rider benefit. The grant was announced September 15; MIT's September 30 report describes the project within this issue's window.",
+      "sources": [
+        {
+          "title": "MIT News: Public Transit Intelligence Hub",
+          "url": "https://news.mit.edu/2026/mit-transit-lab-to-develop-ai-platform-public-transit-agencies-0930",
+          "note": "September 30 institutional report; project scope, planned AI role and stage."
+        }
+      ]
+    },
+    {
+      "title": "AI forecasts glucose changes for a small group of ICU patients",
+      "topic": "Critical care research",
+      "stage": "Research",
+      "source_date": "2026-10-01",
+      "event_date": "Published October 1, 2026; the study analyzed previously collected patient glucose data.",
+      "summary": "Researchers tested a machine-learning system that uses continuous glucose readings to forecast the next 15 to 30 minutes for patients with sepsis and diabetes. In a retrospective evaluation involving ten ICU patients, the model could adapt to an individual patient in seconds on a standard laptop.",
+      "ai_role": "A pretrained time-series model learns patterns in glucose readings and updates its forecasts as more readings arrive; it does not choose treatment.",
+      "why_it_matters": "Short-term warnings could someday help clinicians notice dangerous glucose changes sooner in a fast-moving ICU setting.",
+      "caveat": "This was a small retrospective forecasting study, not a trial showing safer care or better outcomes. Errors increased at the longer forecast horizon, and the authors say continuous-glucose readings and the model need prospective clinical validation before guiding treatment.",
+      "sources": [
+        {
+          "title": "npj Metabolic Health and Disease: A digital twin for tracking and forecasting glycemia with septic patients in ICUs",
+          "url": "https://www.nature.com/articles/s44324-026-00132-2",
+          "note": "Primary paper published October 1; abstract, Results, Discussion limitations and Methods."
+        }
+      ]
+    },
+    {
+      "title": "AI-assisted repairs make 3D-printed designs more usable",
+      "topic": "Design and fabrication",
+      "stage": "Research",
+      "source_date": "2026-10-01",
+      "event_date": "2026-10-01",
+      "summary": "MIT, Google and Northeastern researchers introduced InstructMesh, which lets people select and change parts of AI-generated 3D models before printing. In the team's evaluation, novice users identified and repaired most structural problems in a selected set of generated designs.",
+      "ai_role": "A 3D generator creates the initial model; a language model helps translate a user's requested change into a local edit that the user can inspect and approve.",
+      "why_it_matters": "This could make custom fabrication more accessible to people without advanced modeling skills, including makers adapting everyday objects.",
+      "caveat": "The evaluation used a selected set of designs and users. The system does not guarantee that an object will be safe, durable or fit for a particular purpose; physics and material testing are future work.",
+      "sources": [
+        {
+          "title": "MIT News: InstructMesh",
+          "url": "https://news.mit.edu/2026/instructmesh-tool-lets-users-repair-ai-3d-models-then-fabricate-them-1001",
+          "note": "October 1 research report, including user evaluation and limits."
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "topic": "AI",
+      "title": "Retrieval can give a model information beyond its training data",
+      "claim": "Retrieval-augmented generation (RAG) searches an external source for relevant information and adds that information to a model's prompt before it generates a response.",
+      "context": "RAG does not itself retrain the model or guarantee an accurate answer. The retrieved material can be incomplete, outdated or misused, so sources and outputs still need checking.",
+      "as_of": "General AI system design",
+      "checked_on": "2026-10-06",
+      "sources": [
+        {
+          "title": "Google Cloud: Retrieval augmented generation",
+          "url": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+          "note": "Technical explainer defining retrieval, prompt context and generation."
+        },
+        {
+          "title": "IBM: What is retrieval augmented generation?",
+          "url": "https://www.ibm.com/think/topics/retrieval-augmented-generation",
+          "note": "Technical explainer distinguishing RAG from fine-tuning."
+        }
+      ]
+    },
+    {
+      "topic": "Data centers",
+      "title": "PUE measures facility overhead, not total impact",
+      "claim": "Power Usage Effectiveness (PUE) is total annual data-center facility energy divided by annual energy used by its IT equipment.",
+      "context": "A PUE of 1.2 means the facility uses 1.2 units for each unit used by servers and other IT equipment. A lower PUE means less facility overhead, but does not by itself show total electricity use, emissions, water use or useful computing output.",
+      "as_of": "Data-center infrastructure metric; U.S. DOE 2024 guide",
+      "checked_on": "2026-10-06",
+      "sources": [
+        {
+          "title": "U.S. DOE: Best Practices Guide for Energy-Efficient Data Center Design",
+          "url": "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf",
+          "note": "Section 8.1 defines PUE and explains what it does and does not measure."
+        }
+      ]
+    }
+  ],
+  "historical_story": {
+    "title": "AI helps recover writing from a sealed ancient scroll",
+    "topic": "History and culture",
+    "stage": "Research",
+    "source_date": "2024-02-05",
+    "event_date": "The text was recovered during the 2023 Vesuvius Challenge; the grand-prize result was announced February 5, 2024.",
+    "summary": "In the 2023 Vesuvius Challenge, a team combined scans, virtual unwrapping and machine learning to reveal 15 partial columns of Greek writing inside a Herculaneum papyrus that had remained rolled since the eruption of Mount Vesuvius. The result was announced in February 2024, and papyrologists checked the recovered letter shapes.",
+    "ai_role": "Machine learning helped detect ink in the scanned layers. Other software reconstructed the scroll surface; human scholars verified the letters and interpreted the ancient text.",
+    "why_it_matters": "The work recovered readable material without physically opening a fragile scroll, giving historians new primary evidence from the ancient world.",
+    "caveat": "Only part of one scroll was read in this result. The model identifies ink; it does not understand Greek, and scholars still need to transcribe and interpret the text. This is an archived 2024 development, not news from this week.",
+    "sources": [
+      {
+        "title": "University of Kentucky: Herculaneum grand-prize discovery",
+        "url": "https://uknow.uky.edu/node/241986",
+        "note": "February 5, 2024 institutional report: 15 partial columns, prize timing and papyrologist letter review."
+      },
+      {
+        "title": "University of Oxford: Inside a Herculaneum scroll",
+        "url": "https://www.ox.ac.uk/news/2025-02-07-inside-herculaneum-scroll-seen-first-time-almost-2000-years",
+        "note": "February 2025 institutional report on related scroll work; clarifies that machine learning detects ink, while scholars read the text."
+      },
+      {
+        "title": "U.S. National Endowment for the Humanities: Reading the Invisible Library",
+        "url": "https://www.neh.gov/project/reading-invisible-library-herculaneum-papyrus-scrolls",
+        "note": "Funder account corroborating the 2023–2024 recovery of readable passages."
+      }
+    ]
+  },
+  "reviewed_sha256": "229d0b7975830ee093cb126246bf710188f8eaf4669af85d7a89f75b938d391c"
+}

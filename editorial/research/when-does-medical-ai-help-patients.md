@@ -1,0 +1,16 @@
+# Research notes — When does promising medical AI become better care?
+
+Prepared October 6, 2026 to accompany issue 004. The article is an evergreen explainer anchored in the October 1 ICU paper, not a claim that every cited trial occurred during the weekly news window. Status remains draft; issue 004 links to this feature but neither is approved for publication or email.
+
+Core distinction: model accuracy, independent external validity, usable and safe clinical workflow, patient-relevant comparative outcomes, and continued monitoring are different questions. WHO's evidence framework, the DECIDE-AI accepted-manuscript repository record, and a 2026 peer-reviewed evaluation framework support the structure. The stages are editorial synthesis, not a mandatory fixed regulatory sequence.
+
+Case examples and evidence limits:
+- October 1 npj ICU glucose paper: ten septic ICU patients with diabetes, retrospective CGM forecasting, seconds-long adaptation on a laptop, longer-horizon errors, and no demonstrated treatment or patient outcome effect. Primary paper abstract, Results, Discussion and Methods reviewed.
+- 2026 MASAI randomized Swedish trial: 105,934 randomized; AI-assisted human reading had higher sensitivity, same specificity, and a noninferior interval-cancer rate. The numerically lower interval-cancer rate was not established as a statistically significant reduction. No mortality endpoint claimed. Primary Lancet paper abstract reviewed via PubMed.
+- 2026 Kenyan cluster-randomized primary-care trial: documentation improved; primary 14-day treatment-failure outcome was not significantly different. Study's adjusted odds ratio and raw proportions diverge directionally; the article avoids interpreting either as a beneficial effect. Primary Nature Medicine paper abstract, Results and limitations reviewed.
+- 2024 Taiwan multisite AI-ECG randomized trial: reported lower 90-day all-cause mortality (3.6% vs 4.3%, HR 0.83, 95% CI 0.70–0.99) for the combined alert-and-physician-response intervention. One trial does not establish portability to other settings or isolate the model from the workflow. Primary Nature Medicine abstract and author affiliations reviewed.
+- FDA public comment page (2025) discusses real-world monitoring and drift; it explicitly says it is not guidance or policy. Do not frame as a new regulation.
+
+Counterevidence and balance: The Kenyan null primary outcome checks the temptation to equate better documentation with better health. MASAI is encouraging but demonstrates screening performance and interval-cancer noninferiority, not survival benefit. The ECG result is more patient-centered but may not generalize. The ICU result is promising yet far earlier in the chain. No claim that all medical AI must pass a randomized trial or that retrospective work has no value.
+
+Source access: Opened the ICU, Kenyan, MASAI, Taiwan AI-ECG, WHO, UCL DECIDE-AI, 2026 evaluation framework and FDA pages October 6, 2026. The publisher landing page for the Taiwan ECG trial exposed its abstract; full text was not used. Primary MASAI details were available from its PubMed abstract. Other candidate material was excluded when it was simulation-only, generic device-count reporting, or less relevant to patient outcomes.

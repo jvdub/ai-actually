@@ -2,7 +2,7 @@
 
 For everyday people who are curious about AI but uneasy about its direction. Build an audience by offering credible reasons for hope.
 
-Round up the previous seven complete calendar days before the chosen issue date (default Tuesday, America/Denver). Prefer four to six genuinely worthwhile stories across distinct organizations and topics; publish fewer rather than pad. Prioritize benefits to people, useful research and public-interest progress over funding, executive claims or benchmarks alone.
+Round up the previous seven complete calendar days before the chosen issue date (default Tuesday, America/Denver). Prefer three or four genuinely worthwhile current stories across distinct organizations and topics; publish fewer rather than pad. Add one separately labeled historical good-news story from before September 2026 when a strong, not-yet-used example can be verified. Keep its source and event dates explicit so readers cannot mistake it for current news. Include the two sourced facts and, when prepared, one grounded deep dive. Prioritize benefits to people, useful research and public-interest progress over funding, executive claims or benchmarks alone.
 
 Read underlying sources. Record source publication dates separately from event dates. Label deployed use, pilot results, research and announcements honestly. A report this week about older work is eligible only when the new development is explicit. Check past issues for repeated stories; only include a repeat with a meaningful update. Use primary sources for technical claims and seek independent evidence for consequential claims. Do not turn a university or company release into independently established impact.
 
