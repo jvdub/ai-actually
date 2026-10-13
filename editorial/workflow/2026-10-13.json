@@ -1,0 +1,52 @@
+{
+  "slug": "2026-10-13",
+  "events": [
+    {
+      "event": "prepared_for_review",
+      "revision": "49d27a26a68ecbc556f600d7eded0824f23fbaf8e3ef6793e8c285bc01fae55e",
+      "at": "2026-10-13T16:23:00.837331+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "49d27a26a68ecbc556f600d7eded0824f23fbaf8e3ef6793e8c285bc01fae55e",
+      "text": "Oh sure, yeah, let's deep dive on this. Make it engaging since math isn't always the easiest topic for people.",
+      "at": "2026-10-13T16:29:32.476461+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "0a70d9aae6317e5d300916fa72267d9954035635766b9ef4d7fe587006371e05",
+      "summary": "Added a sourced, accessible math-proof deep dive as a draft and linked it to issue 005; roundup stories and facts are unchanged. Article includes independent cautions and documented corrections.",
+      "at": "2026-10-13T16:29:32.479074+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "0a70d9aae6317e5d300916fa72267d9954035635766b9ef4d7fe587006371e05",
+      "at": "2026-10-13T16:29:32.481499+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "0a70d9aae6317e5d300916fa72267d9954035635766b9ef4d7fe587006371e05",
+      "text": "\"Four current AI developments, one antibiotic discovery from the archive, and two facts about AI and data centers.\" That text seems obvious and unnecessary. I would rather have a subtitle about the impact or outcome, not the literal number of things we highlight.",
+      "at": "2026-10-13T17:06:03.407357+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "3d507eef748595bd77492645f088cb28f88be4a24e180d2a159d03c303968e3b",
+      "summary": "Replaced the inventory-style subtitle with potential benefits for clinicians, genetics researchers and scientists. Wording avoids claiming demonstrated clinical outcomes.",
+      "at": "2026-10-13T17:06:03.448285+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "3d507eef748595bd77492645f088cb28f88be4a24e180d2a159d03c303968e3b",
+      "at": "2026-10-13T17:06:03.451202+00:00"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "3d507eef748595bd77492645f088cb28f88be4a24e180d2a159d03c303968e3b",
+      "package": ".newsroom/releases/2026-10-13/c764122dd5ea257bd064aef33165997553e6f180b797e0e2647eb294b981d394",
+      "at": "2026-10-13T17:08:57.842354+00:00"
+    }
+  ],
+  "prepared_revision": "3d507eef748595bd77492645f088cb28f88be4a24e180d2a159d03c303968e3b",
+  "feedback_pending": false
+}

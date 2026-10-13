@@ -1,0 +1,52 @@
+{
+  "slug": "when-ai-proves-math",
+  "kind": "feature",
+  "title": "AI brought a suitcase full of mathematical keys. Which doors do they open?",
+  "description": "OpenAI released hundreds of mathematical manuscripts. A small prime-number puzzle helps explain the promise—and what it takes to turn an AI's argument into trusted knowledge.",
+  "date": "2026-10-13",
+  "status": "published",
+  "body": "Imagine someone hands you a suitcase full of keys and says they have opened doors that mathematicians have been trying to unlock for decades.\n\nYou would want to know which doors opened. You would also want to try the keys.\n\nThat is a useful way to approach OpenAI's October 6 release of AI-generated mathematical research. There is reason for excitement here. There is also a lot of checking to do.\n\n## What was actually announced?\n\nOpenAI published a large collection of mathematical results produced by an internal, unreleased model, along with some formal proofs that computers can check. Its repository currently lists 719 manuscripts grouped into 372 related families. Those are counts of documents and groups, not a tally of independently confirmed breakthroughs. The repository says the results are at different stages of verification. [Announcement](https://openai.com/index/sharing-ai-progress-in-mathematics/) · [Research collection](https://github.com/openai/math)\n\nFor anyone whose last encounter with mathematics involved a stressful exam, that can sound remote. But research mathematics asks questions whose answers are not waiting at the back of a textbook. Finding a new proof can expand what other researchers are able to build on.\n\nThe important word is **proof**.\n\n## A tiny puzzle explains the big distinction\n\nPrime numbers—2, 3, 5, 7 and so on—are whole numbers greater than one divisible only by one and themselves. Could we eventually run out of them?\n\nFinding another billion primes would not settle that question. There might still be a last one beyond the search.\n\nAn old argument gives something stronger. Imagine a supposedly complete, finite list of primes. Multiply them all together, then add one. None of the listed primes divides that new number: each leaves a remainder of one. The new number must therefore have a prime factor outside the list.\n\nTry it with 2, 3 and 5: their product plus one is 31. The reasoning works for any finite list, however long. It establishes that the primes never run out. This is a teaching example, not a new OpenAI result; the Lean community's textbook also develops a proof of infinitely many primes. [Mathematics in Lean](https://leanprover-community.github.io/mathematics_in_lean/C05_Elementary_Number_Theory.html)\n\nThere is a subtle trap here. The number you construct need not itself be prime. What matters is that it has a prime factor missing from your list. That small distinction is exactly the sort of thing a convincing explanation can glide past.\n\n## Who checks the AI's homework?\n\nA chatbot saying “therefore” is not enough.\n\nLean, an open-source proof assistant, lets researchers express mathematical statements and their proofs in a precise language. It checks that the conclusion follows from the definitions, assumptions and rules being used. Producing a candidate argument and verifying it are different jobs; the Lean documentation explicitly distinguishes them. [How Lean checks proofs](https://lean-lang.org/theorem_proving_in_lean4/Introduction/)\n\nThink of it as requiring every move in a board game to obey the rules. A model may propose the moves, but the checker does not accept them merely because the model sounds confident.\n\nThat is encouraging: an AI-generated argument can face a check beyond another AI's opinion.\n\nThere is still a boundary. The formal statement must match the question people meant to ask, and the assumptions must be appropriate. Proving that a key opens one lock does not establish that it opens the door you care about. Human scrutiny of the translation remains essential.\n\nNor does a formal file necessarily cover an entire paper. OpenAI's checking instructions explicitly identify some artifacts as checks of supporting results rather than the papers' main theorems. A responsible headline needs to say which claim was checked. [Verification scope notes](https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md)\n\n## The corrections are part of the story\n\nOn October 7, OpenAI recorded three manuscript withdrawals after a sign error undermined an argument and two dependent papers. It also documented repairs or clarifications to other manuscripts. [Release history](https://github.com/openai/math/blob/main/history.md)\n\nThat is consequential counterevidence to any claim that everything released was already settled. It is also why public artifacts, version histories and scrutiny matter. Readers need a way to distinguish a proposed result from one that has survived checking.\n\nThe independent Advisory Group on Mathematics and Artificial Intelligence calls the release an important event, while explicitly saying its advisory role is not an endorsement. It describes publication as the start of a process of human understanding. [The group's response](https://agmai.org/)\n\nUnderstanding adds something a pass/fail check cannot provide on its own: insight into why a result works, how far the method extends, and what questions become possible next.\n\n## So, is this good news?\n\nI think it is promising good news. AI that helps discover sound mathematical arguments could give researchers new tools and new starting points. Expanding knowledge is valuable even when an immediate consumer application is hard to name.\n\nThe benefit depends on how that work enters the research community. The advisory group's guidelines raise serious concerns about unequal access to powerful models, appropriate credit for earlier work, and the resources needed to understand large volumes of AI-generated research. They ask labs to support community-led understanding and broader access. [Responsible-release guidelines](https://agmai.org/general-sep29/)\n\nThose concerns deserve room alongside the excitement. A pile of papers creates work as well as opportunity.\n\nYou do not need to understand advanced geometry to follow what happens next. Look for a clearly stated result, evidence that its proof was checked, and explanations from mathematicians who can show what it adds.\n\nThe hopeful possibility is that more doors in mathematics become open—and more people gain the tools to explore what is on the other side.",
+  "sources": [
+    {
+      "title": "OpenAI: Sharing AI progress in mathematics",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "note": "October 6 announcement; artifacts and model availability."
+    },
+    {
+      "title": "OpenAI mathematical research repository",
+      "url": "https://github.com/openai/math",
+      "note": "Current catalogue and verification-status disclaimer; document counts are not verified-result counts."
+    },
+    {
+      "title": "Mathematics in Lean: Elementary Number Theory",
+      "url": "https://leanprover-community.github.io/mathematics_in_lean/C05_Elementary_Number_Theory.html",
+      "note": "Infinitely-many-primes section; teaching example, not a new AI result."
+    },
+    {
+      "title": "Theorem Proving in Lean: Introduction",
+      "url": "https://lean-lang.org/theorem_proving_in_lean4/Introduction/",
+      "note": "Finding versus verifying proofs; foundations and proof objects."
+    },
+    {
+      "title": "OpenAI Comparator challenges",
+      "url": "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md",
+      "note": "Supporting-result comparisons expressly exclude main-theorem coverage for listed setups."
+    },
+    {
+      "title": "OpenAI math release history",
+      "url": "https://github.com/openai/math/blob/main/history.md",
+      "note": "October 7 withdrawals and repairs; sign error and dependencies."
+    },
+    {
+      "title": "AGMAI: Response to OpenAI's release",
+      "url": "https://agmai.org/",
+      "note": "October 6 statement; independent advice is not endorsement and understanding remains necessary."
+    },
+    {
+      "title": "AGMAI: Responsible release guidelines",
+      "url": "https://agmai.org/general-sep29/",
+      "note": "September 29 guidance on access, attribution and community-led understanding."
+    }
+  ],
+  "reviewed_sha256": "62c38b452b0a374875863fdcbf97341a487ce2302713a327fc8f68ebb7e12c4b"
+}

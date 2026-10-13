@@ -1,0 +1,23 @@
+{
+  "revision": "62c38b452b0a374875863fdcbf97341a487ce2302713a327fc8f68ebb7e12c4b",
+  "reviewer": "AI editorial review of opened primary evidence and finished article",
+  "checked_at": "2026-10-13T16:29:32.478316+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "The announcement and repository support release scale but explicitly not blanket verification. Counts are documents/families. The elementary prime argument is identified as a historical teaching example and correctly allows the constructed number to be composite. Lean's Introduction supports rule-based proof verification; the statement-matching boundary is explained as editorial reasoning. Comparator instructions explicitly distinguish supporting results from main theorems. October 7 history supports three withdrawals after a sign error and subsequent repairs. Independent AGMAI statements supply counterevidence, non-endorsement, access and understanding concerns. Prospective benefits are conditional; no individual frontier theorem or downstream application is claimed independently verified. Sources were opened; no Lean artifacts were executed by this review.",
+      "sources_checked": [
+        "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+        "https://github.com/openai/math",
+        "https://leanprover-community.github.io/mathematics_in_lean/C05_Elementary_Number_Theory.html",
+        "https://lean-lang.org/theorem_proving_in_lean4/Introduction/",
+        "https://github.com/openai/math/blob/main/lean/ComparatorChallenges/README.md",
+        "https://github.com/openai/math/blob/main/history.md",
+        "https://agmai.org/",
+        "https://agmai.org/general-sep29/"
+      ]
+    }
+  }
+}
