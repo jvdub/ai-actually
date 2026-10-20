@@ -1,0 +1,20 @@
+{
+  "revision": "4e416a9dda2ae4704f07d62f5aa1cda17f0d6a041d573d53eb10d322f1a74122",
+  "reviewer": "AI editorial source and readability review; not an independent expert audit",
+  "checked_at": "2026-10-20T12:51:21.676891+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "Complete article checked against opened primary sources. October 19 Nature editorial is explicitly an editorial, not experimental proof. Turpin et al.'s 2023 controlled bias-cue findings are scoped to GPT-3.5/Claude 1.0 and not extrapolated as measurements of today's models. March 2025 circuit-tracing account supports Dallas/Texas internal intervention example; approximation, selected case studies and incomplete coverage stated. 2025 monitorability paper is described as a position paper and monitoring as useful but fragile. October 16 self-assessment report is a company claim, not independent validation or mechanistic interpretation. Hypothetical laptop and school examples are clearly illustrations; no attributed interviews, current performance statistics, sentience, universal deception or solved-interpretability claims. Post-hoc explanation, intermediate reasoning, internal mechanisms and conversation assessment are distinguished. Plain-language accessibility reviewed; practical advice is editorial synthesis.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s42256-026-01333-6",
+        "https://arxiv.org/abs/2305.04388",
+        "https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
+        "https://arxiv.org/abs/2507.11473",
+        "https://safeguards.anthropic.com/2026/self-assessment/"
+      ]
+    }
+  }
+}

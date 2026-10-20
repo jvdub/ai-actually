@@ -1,0 +1,141 @@
+{
+  "slug": "2026-10-20",
+  "kind": "issue",
+  "number": "006",
+  "title": "A little more time to prepare",
+  "description": "Better weather warnings and clearer views of cells and hospital stays could help people make earlier, better-informed decisions.",
+  "date": "2026-10-20",
+  "status": "published",
+  "subject": "AI, Actually: A little more time to prepare",
+  "intro": "Some of AI's most useful work happens before a decision: spotting a weather risk, helping a scientist choose the next experiment, or making a patient's recent history easier to follow. This week brings progress on each of those fronts. From the archive, we revisit a breakthrough that gave biologists a new way to explore protein shapes.",
+  "window_start": "2026-10-13",
+  "window_end": "2026-10-19",
+  "stories": [
+    {
+      "title": "Learning from forecast mistakes could give communities more warning",
+      "topic": "Weather and preparedness",
+      "stage": "Research",
+      "source_date": "2026-10-14",
+      "event_date": "Peer-reviewed Nature paper published October 14, 2026; includes evaluation in ECMWF's 2025 real-time forecasting competition.",
+      "summary": "A team spanning Microsoft Research, MIT and other institutions developed a machine-learning layer that corrects recurring errors in weather forecasts two to six weeks ahead. In their tests it improved the leading physics-based model's skill for 92% of temperature targets and 98% of precipitation targets. Its forecasts also led the evaluated variables and lead times in ECMWF's 2025 competition.",
+      "ai_role": "Probabilistic bias correction learns from past forecasts and observations, then adjusts the probabilities produced by an existing forecasting system.",
+      "why_it_matters": "More useful advance warning could help farmers time work, energy operators prepare supplies and communities plan for extreme weather.",
+      "caveat": "These are gains in probabilistic forecast skill, not a guarantee of the weather on a particular day six weeks away. The study does not demonstrate fewer deaths or lower disaster losses.",
+      "sources": [
+        {
+          "title": "Nature: Advancing subseasonal forecasting with machine learning",
+          "url": "https://www.nature.com/articles/s41586-026-11126-x",
+          "note": "October 14 primary paper; abstract and evaluation. Percentages are shares of evaluated targets improved, not percentage improvements in accuracy."
+        },
+        {
+          "title": "Authors' full research manuscript",
+          "url": "https://arxiv.org/html/2604.16238v3",
+          "note": "Full methods and evaluation; probabilistic forecasts and limits of skill."
+        },
+        {
+          "title": "ECMWF AI Weather Quest: SON 2025 results",
+          "url": "https://confluence.ecmwf.int/spaces/AWQ/pages/589475509/SON%2B2025%2Bperiod",
+          "note": "Competition organizer's leaderboard; separate from the authors' impact interpretation."
+        }
+      ]
+    },
+    {
+      "title": "A new tool looks for what draws immune cells into tumors",
+      "topic": "Cancer biology",
+      "stage": "Research",
+      "source_date": "2026-10-13",
+      "event_date": "Nature Biomedical Engineering paper published October 13, 2026.",
+      "summary": "Researchers developed SPACER to study why particular cells gather in particular parts of a tissue. Using 37 datasets covering human tumors and mouse heart tissue, it identified molecular patterns associated with immune-cell recruitment—including tumor mucins linked to barriers to T-cell engagement.",
+      "ai_role": "An interpretable learning model connects gene activity and cell locations to candidate signals that may attract or discourage nearby cells.",
+      "why_it_matters": "Understanding why immune cells reach some tumor regions but miss others could help scientists choose more informative experiments and investigate resistance to immunotherapy.",
+      "caveat": "The findings come from tissue analyses and preclinical work. They do not establish a new treatment or show that using SPACER improves patient outcomes; a learned association also needs biological investigation.",
+      "sources": [
+        {
+          "title": "Nature Biomedical Engineering: Interpretable AI model reveals spatial codes of cell recruitment in tissues",
+          "url": "https://www.nature.com/articles/s41551-026-01804-6",
+          "note": "Primary abstract, figure descriptions and publication date accessed; full paper is subscription-restricted. Claims limited to the accessible evidence."
+        },
+        {
+          "title": "Journal research briefing on SPACER",
+          "url": "https://www.nature.com/articles/s41551-026-01803-7",
+          "note": "October 19 author-facing research briefing; distinguishes cancer analyses from mouse myocarditis model."
+        }
+      ]
+    },
+    {
+      "title": "An ICU timeline could help clinicians see what happened between check-ins",
+      "topic": "Hospital research",
+      "stage": "Research",
+      "source_date": "2026-10-15",
+      "event_date": "TRACER preprint submitted October 15, 2026; Stanford research explanation published October 16.",
+      "summary": "Stanford researchers introduced TRACER, a prototype that combines bedside video with health records to build a timeline of activity during an ICU stay. Clinicians can ask questions and follow timestamped answers back to the video. A retrospective analysis of 280 patients also found less purposeful movement among patients with documented delirium.",
+      "ai_role": "Vision-language models label short video segments; language-model tools combine those observations with medication records and produce searchable summaries.",
+      "why_it_matters": "A reviewable timeline might help staff follow changes across shifts and investigate a patient's activity without manually watching days of footage.",
+      "caveat": "This is a single-center retrospective preprint. Its long-form question benchmark covers only two ICU stays; summaries can contain errors. The delirium association does not establish predictive ability, and consent, privacy and staff-surveillance concerns remain prerequisites for deployment.",
+      "sources": [
+        {
+          "title": "TRACER: Full research preprint",
+          "url": "https://arxiv.org/html/2610.21266v1",
+          "note": "Methods, cohort analysis and Limitations; single center, two stays in question benchmark, potential hallucinations and monitoring concerns."
+        },
+        {
+          "title": "Stanford AI Lab: TRACER",
+          "url": "https://ai.stanford.edu/blog/tracer/",
+          "note": "October 16 researchers' explanation of timeline and timestamped evidence; treated as author account, not independent validation."
+        }
+      ]
+    }
+  ],
+  "historical_story": {
+    "title": "AlphaFold gave biologists a powerful new starting point",
+    "topic": "Protein science",
+    "stage": "Research",
+    "source_date": "2021-07-15",
+    "event_date": "AlphaFold2 was assessed in the blind CASP14 competition in 2020; its detailed Nature paper appeared July 15, 2021.",
+    "summary": "Proteins are chains that fold into three-dimensional shapes, and those shapes help determine what they do. In the 2020 CASP14 blind assessment, DeepMind's AlphaFold2 predicted structures with accuracy competitive with experimental structures in a majority of cases. The 2021 paper explained the system and made its methods available for others to examine.",
+    "ai_role": "The neural network combines information from amino-acid sequences, evolutionary relationships and learned structural constraints to predict a protein's three-dimensional arrangement.",
+    "why_it_matters": "A useful predicted structure can give biologists a starting point for experiments that would otherwise be much harder to plan.",
+    "caveat": "A predicted shape is not a complete account of how a protein works. Confidence varies across regions and targets, and experimental checks remain important. This result did not eliminate the need for structural biology.",
+    "sources": [
+      {
+        "title": "Nature: Highly accurate protein structure prediction with AlphaFold",
+        "url": "https://www.nature.com/articles/s41586-021-03819-2",
+        "note": "July 15, 2021 primary paper; CASP14 blind assessment, confidence measures and discussion of limitations."
+      }
+    ]
+  },
+  "facts": [
+    {
+      "topic": "AI",
+      "title": "Doing well on familiar examples can hide a learning failure",
+      "claim": "Overfitting occurs when a model fits its training examples so closely that it performs poorly on new examples.",
+      "context": "Think of memorizing practice-test answers without learning the subject. Held-out evaluation helps test whether a model learned a pattern that transfers; a strong training score alone cannot establish that.",
+      "as_of": "General machine-learning concept; source checked October 20, 2026",
+      "checked_on": "2026-10-20",
+      "sources": [
+        {
+          "title": "Google Machine Learning Crash Course: Overfitting",
+          "url": "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting",
+          "note": "Definition and examples; training performance versus unseen data."
+        }
+      ]
+    },
+    {
+      "topic": "Data centers",
+      "title": "Cool outdoor air can do some of the cooling work",
+      "claim": "A data center equipped with an air-side economizer can use suitable outdoor air to reduce mechanical cooling demand.",
+      "context": "Temperature, humidity, air quality and the facility's design determine when this works. Fans, filtration and controls still use energy; the industry term 'free cooling' does not mean zero electricity or that every site can use it.",
+      "as_of": "Engineering principle in the U.S. Department of Energy's 2024 design guide, sections 4.4 and 5.4.1; not a current fleet-wide consumption estimate",
+      "checked_on": "2026-10-20",
+      "sources": [
+        {
+          "title": "DOE: Best Practices Guide for Energy-Efficient Data Center Design",
+          "url": "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf",
+          "note": "Sections 4.4 and 5.4.1: outside-air cooling, humidity, filtration, local climate and control requirements."
+        }
+      ]
+    }
+  ],
+  "feature_slug": "when-ai-explains-itself",
+  "reviewed_sha256": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee"
+}

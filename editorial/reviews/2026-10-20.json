@@ -1,0 +1,55 @@
+{
+  "revision": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee",
+  "reviewer": "AI editorial review; unchanged roundup evidence retained, new reviewed feature linkage checked",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "story:0": {
+      "verdict": "supported",
+      "basis": "Nature abstract accessed directly with urllib; full author manuscript and ECMWF organizer leaderboard opened. Publication is October 14, while competition is 2025. 92%/98% are fractions of evaluated targets improved, not gains in accuracy. Competition scope is evaluated variables/leads, not all possible weather forecasts. Benefits for public preparedness remain prospective, not measured outcomes.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41586-026-11126-x",
+        "https://arxiv.org/html/2604.16238v3",
+        "https://confluence.ecmwf.int/spaces/AWQ/pages/589475509/SON%2B2025%2Bperiod"
+      ]
+    },
+    "story:1": {
+      "verdict": "supported",
+      "basis": "October 13 primary abstract and figures accessed directly; full article is paywalled. October 19 journal briefing corroborates 37 datasets, gene-level recruitment analysis, tumor mucins and preclinical mouse context. Claims stay within accessible abstract/briefing and are framed as associations and research opportunities; no clinical benefit or independent replication asserted.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41551-026-01804-6",
+        "https://www.nature.com/articles/s41551-026-01803-7"
+      ]
+    },
+    "story:2": {
+      "verdict": "supported",
+      "basis": "Full October 15 preprint including Methods and Limitations opened and assessed; Stanford October 16 post supplies explanation. Cohort is 280 patients, but 144-question reasoning benchmark covers two stays. Summaries may hallucinate; single-center retrospective analysis does not establish delirium prediction. Consent/privacy/staff monitoring boundaries recorded. Preprint is not described as peer reviewed.",
+      "sources_checked": [
+        "https://arxiv.org/html/2610.21266v1",
+        "https://ai.stanford.edu/blog/tracer/"
+      ]
+    },
+    "historical_story": {
+      "verdict": "supported",
+      "basis": "July 15 2021 Nature primary paper Main/CASP14 evaluation and confidence discussions opened. Blind test was in 2020; accuracy competitive with experiments in majority of tested cases is scoped to assessment. No claim all proteins solved, complete biological function inferred, or structural biology eliminated. Archive choice does not repeat prior archive picks.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41586-021-03819-2"
+      ]
+    },
+    "fact:0": {
+      "verdict": "supported",
+      "basis": "Google ML Crash Course definition and training-versus-test examples directly support overfitting as strong training fit with weak unseen-data performance. Analogy is editorial; held-out performance is not described as a guarantee.",
+      "sources_checked": [
+        "https://developers.google.com/machine-learning/crash-course/overfitting/overfitting"
+      ]
+    },
+    "fact:1": {
+      "verdict": "supported",
+      "basis": "DOE 2024 guide sections 4.4 and 5.4.1 directly support use of acceptable outside-air conditions and local climate/humidity/filtration constraints. Claim is a stable engineering principle, not a dated fleet-wide demand estimate; free cooling is not represented as energy-free.",
+      "sources_checked": [
+        "https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf"
+      ]
+    }
+  },
+  "checked_at": "2026-10-20T12:51:21.677141+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "2026-10-20",
+  "events": [
+    {
+      "event": "prepared_for_review",
+      "revision": "2d83d24e61ae71b90e36d468d2a0d1c881ce073d13bf8a908c2d68ff2a18a9b9",
+      "at": "2026-10-20T08:07:32.973758+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "2d83d24e61ae71b90e36d468d2a0d1c881ce073d13bf8a908c2d68ff2a18a9b9",
+      "text": "Yeah, let's do that one. Remember the target audience is AI skeptics that may not know much about it. [Selected topic: When AI shows its work, what are we actually seeing? Broader AI-news deep dive about interpretability and safety.]",
+      "at": "2026-10-20T12:51:21.673809+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee",
+      "summary": "Added a broader AI-news deep dive for skeptical nontechnical readers, explaining faithful explanations, circuit tracing, monitoring and practical accountability. Linked reviewed article to issue 006; roundup content remains unchanged.",
+      "at": "2026-10-20T12:51:21.677636+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee",
+      "at": "2026-10-20T12:51:21.680207+00:00"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee",
+      "package": ".newsroom/releases/2026-10-20/2a2cf0111aefc75d5f975f794ec9793061be4d738241707bfd7c0f65dd525fa0",
+      "at": "2026-10-20T14:56:59.865048+00:00"
+    }
+  ],
+  "prepared_revision": "a042694a4fa3fb9e04533e39afd26942c3d7ab4dc2deb2e201ea803feb02baee",
+  "feedback_pending": false
+}
