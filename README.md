@@ -40,3 +40,5 @@ Content lives in `content/issues/` and `content/features/`; styling lives in `as
 Use **View published website** for the locally built public site. Use **Open reader preview** beside the preview tabs to see the selected saved draft at full width, with the final reader layout, without publishing it. Select Email to open the email version; Kit supplies its final template and footer.
 
 New editions include one AI fact and one data-center fact, with primary sources, scope and context. Edit these in the newsroom. Historical editions keep their original content. Automated checks require the source fields but cannot establish truth; review the evidence before approval.
+
+Social profile links are configured with `x_url` and `linkedin_url` in `publication.json`. Valid HTTP(S) URLs appear in website footers and generated newsletter emails; leave a value empty to omit that network.

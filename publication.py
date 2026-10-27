@@ -109,12 +109,21 @@ def check_sources(sources):
     for s in sources:
         if not s.get("title") or not safe_url(s.get("url","")):raise ValueError("Source needs a title and HTTP(S) URL")
 def route(d): return "/"+("issues" if d["kind"]=="issue" else "features")+"/"+d["slug"]+"/"
+def social_links(cfg,email=False):
+    links=[]
+    for key,label in (("x_url","X"),("linkedin_url","LinkedIn")):
+        url=cfg.get(key,"")
+        if url and safe_url(url):
+            style=' style="color:#2358dc;text-decoration:underline"' if email else ''
+            links.append(f'<a href="{esc(url)}"{style}>{label}</a>')
+    return (" · " if email else "").join(links)
+
 def page(title,description,body,cfg,path="/",draft=False):
     base=cfg.get("site_url","").rstrip("/")
     canonical=f'<link rel="canonical" href="{esc(base+path)}">' if base and not draft else ""
     robot='<meta name="robots" content="noindex,nofollow">' if draft or not base else ""
     signup=f'<a href="{esc(cfg["signup_url"])}">Subscribe</a>' if cfg.get("signup_url") and safe_url(cfg["signup_url"]) else ""
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>{esc(title)} — AI, Actually</title><meta name="description" content="{esc(description)}">{canonical}{robot}<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><link rel="stylesheet" href="/styles.css"><link rel="icon" href="/favicon.svg" type="image/svg+xml"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><div class="top"><a class="brand" href="/">AI<span>,</span> Actually<span>.</span></a><nav aria-label="Main navigation"><a href="/archive/">The roundup</a><a href="/features/">A closer look</a><a href="/about/">About</a>{signup}</nav></div></div></header>{body}<footer class="wrap"><div class="footer"><span>AI, Actually. &nbsp; Hope, with context.</span><nav aria-label="Publication information"><a href="/standards/">Editorial standards</a><a href="/corrections/">Corrections</a><a href="/privacy/">Privacy</a></nav></div></footer></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>{esc(title)} — AI, Actually</title><meta name="description" content="{esc(description)}">{canonical}{robot}<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><link rel="stylesheet" href="/styles.css"><link rel="icon" href="/favicon.svg" type="image/svg+xml"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><div class="top"><a class="brand" href="/">AI<span>,</span> Actually<span>.</span></a><nav aria-label="Main navigation"><a href="/archive/">The roundup</a><a href="/features/">A closer look</a><a href="/about/">About</a>{signup}</nav></div></div></header>{body}<footer class="wrap"><div class="footer"><span>AI, Actually. &nbsp; Hope, with context.</span><nav aria-label="Publication information"><a href="/standards/">Editorial standards</a><a href="/corrections/">Corrections</a><a href="/privacy/">Privacy</a>{social_links(cfg)}</nav></div></footer></body></html>'''
 def sources_html(sources):
     return "<ul>"+"".join(f'<li><a href="{esc(s["url"])}">{esc(s["title"])}</a>'+(" · "+esc(s["note"]) if s.get("note") else "")+"</li>" for s in sources)+"</ul>"
 def story_html(s,idx):
@@ -179,6 +188,8 @@ def email_html(d,cfg):
         if d.get("feature_slug"):
             links+='<p style="margin:10px 0"><a href="'+esc(base+"/features/"+d["feature_slug"]+"/")+'" style="color:#2358dc;font-weight:bold;text-underline-offset:4px">A closer look: this week’s featured explainer →</a></p>'
     closing='<div style="border-top:1px solid #c8ced7;margin-top:28px;padding-top:18px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.55;color:#526078">AI, Actually · Hope, with context.<br>Prepared with AI assistance; sources linked throughout.</div>'
+    if social_links(cfg,email=True):
+        closing+='<p style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#526078">Follow AI, Actually: '+social_links(cfg,email=True)+'</p>'
     return '<div style="max-width:640px;margin:0 auto;padding:30px 20px;font-family:Georgia,Times New Roman,serif;color:#172336;background:#ffffff">'+header+intro+"".join(stories)+facts+links+closing+'</div>'
 
 def build(root=ROOT,production=False):
