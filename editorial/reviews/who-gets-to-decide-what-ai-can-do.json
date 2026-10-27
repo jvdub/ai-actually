@@ -1,0 +1,22 @@
+{
+  "revision": "4413bbc4f539b964f13de9f9066bb75456dc8df1bdfd4254da34f5f8be82a2ea",
+  "reviewer": "AI editorial source and readability review; not an independent expert or legal audit",
+  "checked_at": "2026-10-27T15:30:34.305414+00:00",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "feature": {
+      "verdict": "supported",
+      "basis": "Complete draft reviewed separately against opened primary sources. October 8 policy announcement and November 12 effective date kept distinct; policy intent not safety efficacy. October 18 fund proposal has shareholder condition, wholly owned status and no invented public decision rights. NIST is voluntary; EU risk-based framework and divided enforcement accurately summarized with explicit phased-implementation warning, no legal advice or blanket claim all duties apply. Columbia proceedings identified as workshop recommendations with openness benefits and gaps, not proof open models universally safer; open weights distinguished from complete reproducibility. 2023 public-input trial accurately scoped to ~1000 Americans screened for AI familiarity; researcher moderation and translation limits included, not public control of deployed model. Classroom and institution scenarios explicitly hypothetical. Claims about desired appeals, proportionate oversight, political/commercial incentives and independent scrutiny are labeled editorial analysis or recommendations, not evidence that a particular government or company committed misconduct. Older examples dated, not passed off as this week's news. No unverified IPO terms, assertions all jurisdictions grant an appeal, or technical access promises. Readability checked for skeptical non-specialist audience.",
+      "sources_checked": [
+        "https://www.anthropic.com/news/2026-usage-policy-update",
+        "https://www.anthropic.com/news/public-benefit-fund",
+        "https://www.nist.gov/itl/ai-risk-management-framework",
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "https://arxiv.org/abs/2506.22183",
+        "https://arxiv.org/pdf/2506.22183",
+        "https://www.anthropic.com/research/collective-constitutional-ai-aligning-a-language-model-with-public-input"
+      ]
+    }
+  }
+}

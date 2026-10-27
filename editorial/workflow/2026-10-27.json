@@ -1,0 +1,63 @@
+{
+  "slug": "2026-10-27",
+  "events": [
+    {
+      "event": "prepared_for_review",
+      "revision": "d171e9548f520478d183cb60ce08212029774b91784065e4e6821912755f3b43",
+      "at": "2026-10-27T08:02:16.607100+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "d171e9548f520478d183cb60ce08212029774b91784065e4e6821912755f3b43",
+      "text": "What about Citrini's work on finding cures for scorpion stings? That seems like it should be in here and it was released in this window.",
+      "at": "2026-10-27T12:50:53.915964+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "d4ab5815377fa52c19eed7597049271cbf918e36964c9328042523d72d869987",
+      "summary": "Verified October 20 publication and primary experimental findings; added Citrini as lead, replacing diagnosis benchmark. Distinguishes toxin binding from neutralization and clinical efficacy. Updated intro, description and revision-bound source review; preserved earlier snapshot.",
+      "at": "2026-10-27T12:50:53.917882+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "d4ab5815377fa52c19eed7597049271cbf918e36964c9328042523d72d869987",
+      "at": "2026-10-27T12:50:53.920007+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "d4ab5815377fa52c19eed7597049271cbf918e36964c9328042523d72d869987",
+      "text": "I think the forest story can stay. I think the one my readers will enjoy the least is the AI orchestra one. We can remove that one and keep the forest one.",
+      "at": "2026-10-27T12:52:48.891430+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "f010ad784f4a84a343c80716c055515cf1f6c3a6a8a55d5068080285e829c397",
+      "summary": "Removed orchestra; retained forest story, Citrini lead and software verification. Updated introductory copy and review coverage. Historical story and both facts remain unchanged.",
+      "at": "2026-10-27T12:52:48.893488+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "f010ad784f4a84a343c80716c055515cf1f6c3a6a8a55d5068080285e829c397",
+      "at": "2026-10-27T12:52:48.895439+00:00"
+    },
+    {
+      "event": "feedback",
+      "revision": "f010ad784f4a84a343c80716c055515cf1f6c3a6a8a55d5068080285e829c397",
+      "text": "Oh, what happened to this one? \"A diagnostic system makes progress on asking the next useful question\" Can we add it back in so there are 4 current stories? Then all those potential articles sound good to me. I think I'm most drawn to \"Who gets to decide what AI can do?\" So, let's research and do a write up for that.",
+      "at": "2026-10-27T15:30:34.303267+00:00"
+    },
+    {
+      "event": "feedback_addressed",
+      "revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
+      "summary": "Restored diagnostic story as fourth current item; orchestra remains removed. Wrote and linked sourced governance closer look, reviewed claim scope and readability, and preserved prior packets and feedback.",
+      "at": "2026-10-27T15:30:34.306529+00:00"
+    },
+    {
+      "event": "prepared_for_review",
+      "revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
+      "at": "2026-10-27T15:30:34.309158+00:00"
+    }
+  ],
+  "prepared_revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
+  "feedback_pending": false
+}
