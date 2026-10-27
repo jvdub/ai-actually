@@ -1,0 +1,163 @@
+{
+  "slug": "2026-10-27",
+  "kind": "issue",
+  "number": "007",
+  "title": "Better tools for the people doing the work",
+  "description": "Promising antivenom research, clearer forest maps and tools to help people check software and investigate diagnoses.",
+  "date": "2026-10-27",
+  "status": "draft",
+  "subject": "AI, Actually: Better tools for the people doing the work",
+  "intro": "This week, AI helped researchers find lab-tested leads toward scorpion antivenom, distinguish natural forests from tree plantations, write checkable proofs about software, and investigate medical cases step by step. These are different stages of progress, with people still responsible for testing what works. Our closer look asks who should get to set the boundaries as AI becomes more capable.",
+  "window_start": "2026-10-20",
+  "window_end": "2026-10-26",
+  "stories": [
+    {
+      "title": "AI-designed proteins offer leads toward scorpion antivenom",
+      "topic": "Antivenom research",
+      "stage": "Research",
+      "source_date": "2026-10-20",
+      "event_date": "Results released October 20, 2026, following an earlier computational design campaign and laboratory testing.",
+      "summary": "Citrini Research teamed up with Anthropic to explore whether AI could help develop scorpion antivenom. Laboratories tested 211 protein designs; 17 met the project's criteria for attaching to toxins. The successful designs targeted four different toxins.",
+      "ai_role": "An internal Claude model coordinated protein-design tools and selected candidates, with human guidance. Contract laboratories made and tested the proteins.",
+      "why_it_matters": "The project turned computer-generated ideas into experimentally tested leads for a neglected health problem, with results shared publicly for further research.",
+      "caveat": "Attaching to a toxin does not prove a protein neutralizes it. The project did not establish protection in animals or safety and effectiveness in people. Each successful design bound one toxin; the broader goal of binding multiple toxins was not achieved.",
+      "sources": [
+        {
+          "title": "Citrini Research: Citrini Therapeutics",
+          "url": "https://www.citriniresearch.com/p/citrini-therapeutics",
+          "note": "October 20 first-person report; collaboration and experimental project, not independent validation."
+        },
+        {
+          "title": "Anthropic: How Claude designed protein binders against scorpion neurotoxins",
+          "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+          "note": "Primary October 20 report: 211 tested, 17 qualifying binders, four toxins; binding distinguished from neutralization and antivenom efficacy."
+        }
+      ]
+    },
+    {
+      "title": "A clearer forest map can help distinguish conservation from tree farming",
+      "topic": "Forests and conservation",
+      "stage": "Research",
+      "source_date": "2026-10-22",
+      "event_date": "Scientific Data paper published October 21, 2026; map release announced October 22. The baseline represents land in 2020.",
+      "summary": "Google researchers, WRI and IIASA released ForTy, a global map that separates natural forests, planted forests, intensive plantations, tree crops and other land at 10-meter resolution. The primary paper reports 90.2% overall accuracy across six classes against 8,190 expert-labeled validation sites.",
+      "ai_role": "A deep-learning pipeline combines satellite-derived representations with labeled examples to estimate which forest or land-use category each location belongs to.",
+      "why_it_matters": "Tree cover alone cannot tell conservation teams whether a natural forest has been replaced with a plantation. A more detailed baseline can support investigation of land-use changes and supply chains.",
+      "caveat": "This is a 2020 baseline released now, not a live picture of today's forests. Some categories depend on land-use history that satellites cannot directly observe, and errors vary by class and location. It is evidence to investigate, not automatic proof of compliance.",
+      "sources": [
+        {
+          "title": "Scientific Data: Global forest typology at 10-meter resolution",
+          "url": "https://www.nature.com/articles/s41597-026-08299-5",
+          "note": "Primary paper abstract, independent validation, baseline year and classification-boundary limitations."
+        },
+        {
+          "title": "Google DeepMind: Beyond tree cover",
+          "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+          "note": "October 22 release announcement; partner account, not independent impact evidence."
+        }
+      ]
+    },
+    {
+      "title": "AI-written proofs offer a stronger way to check parts of everyday software",
+      "topic": "Software security",
+      "stage": "Research",
+      "source_date": "2026-10-22",
+      "event_date": "Anthropic and Theorem research released October 22, 2026, describing work over several weeks.",
+      "summary": "Anthropic and Theorem report using Claude to write machine-checked proofs covering 239 test entry points across 123 open-source software libraries. After fixing bugs it found, the system proved that those entry points would not crash for inputs below a specified size under the modeled conditions.",
+      "ai_role": "Claude writes formal arguments; a separate proof checker, Rocq, checks whether they establish the specified property.",
+      "why_it_matters": "Software libraries support many other programs. Making rigorous checks less labor-intensive could help maintainers prevent classes of failures that ordinary testing can miss.",
+      "caveat": "These are company-reported results, not a claim that the libraries are bug-free. Coverage assumes particular compiled RISC-V programs, Linux behavior, single-threaded operation, fixed memory and inputs below 64 MB. The models, specifications and checker must themselves be trustworthy; released proofs cover a subset of the work.",
+      "sources": [
+        {
+          "title": "Anthropic: Formal software verification at larger scale",
+          "url": "https://www.anthropic.com/research/formal-verification",
+          "note": "Primary October 22 report; scope, assumptions, proof checker and explicit warning that verified does not mean bug-free."
+        },
+        {
+          "title": "Theorem: Released statements and proofs",
+          "url": "https://github.com/theorem-labs/oss-verify-proofs",
+          "note": "Collaborator's public artifacts; inspected documentation, proofs not executed locally."
+        }
+      ]
+    },
+    {
+      "title": "A diagnostic system makes progress on asking the next useful question",
+      "topic": "Medical research",
+      "stage": "Research",
+      "source_date": "2026-10-22",
+      "event_date": "Peer-reviewed Science paper published October 22, 2026, building on an earlier preprint.",
+      "summary": "Microsoft's MAI-DxO investigates written medical cases by asking questions, requesting test results and revising possible diagnoses. The newly published Science study reports 83.2% accuracy on difficult NEJM case records, compared with 36.1% for participating generalist physicians using reference resources.",
+      "ai_role": "The system coordinates simulated clinical roles to challenge hypotheses and select further information before settling on a diagnosis.",
+      "why_it_matters": "Studying the process of diagnosis—not just a final multiple-choice answer—could help researchers develop more useful clinical support tools.",
+      "caveat": "This is a text-based benchmark, not treatment of real patients. Doctors worked individually; specialist teams were not the comparison. The benchmark can synthesize missing test findings, and estimated costs are not actual savings. Better patient outcomes and clinical safety remain to be established.",
+      "sources": [
+        {
+          "title": "Microsoft AI: October 22 research announcement",
+          "url": "https://microsoft.ai/news/building-medical-superintelligence/",
+          "note": "Publication timing and results; company account, not independent confirmation of clinical benefit."
+        },
+        {
+          "title": "Authors' full manuscript: Sequential Diagnosis with Language Models",
+          "url": "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+          "note": "Accessible manuscript dated November 8, 2025; abstract and section 5.3 checked. Not represented as the final Science typeset version; reported figures cross-checked against the indexed Science abstract."
+        },
+        {
+          "title": "SDBench: Benchmark design",
+          "url": "https://microsoft.github.io/sdbench/",
+          "note": "Primary project documentation; text-based gatekeeper, synthetic missing results and diagnosis scoring."
+        }
+      ]
+    }
+  ],
+  "historical_story": {
+    "title": "Flood forecasts reached rivers with little local measurement data",
+    "topic": "Early warning",
+    "stage": "Deployed use",
+    "source_date": "2024-03-20",
+    "event_date": "Nature paper published March 20, 2024; describes an operational system available at that time.",
+    "summary": "A 2024 study showed that AI could forecast extreme river floods in watersheds lacking local stream gauges. In its evaluation, forecasts up to five days ahead matched or exceeded the reliability of the comparison system's same-day estimates. The authors reported incorporating the model into a free operational forecasting service in more than 80 countries.",
+    "ai_role": "A neural network learned relationships between weather, watershed characteristics and river flow that could transfer to places without local calibration records.",
+    "why_it_matters": "Communities with sparse monitoring infrastructure also need warning time. This offered a way to extend useful forecasts beyond well-instrumented rivers.",
+    "caveat": "The comparison concerns particular river-flood metrics and the then-current GloFAS baseline, not every type of flood or every location. The paper did not measure lives saved, and forecasts still require effective communication and response.",
+    "sources": [
+      {
+        "title": "Nature: Global prediction of extreme floods in ungauged watersheds",
+        "url": "https://www.nature.com/articles/s41586-024-07145-1",
+        "note": "March 2024 primary paper; comparison baseline, lead times and reported operational coverage at publication."
+      }
+    ]
+  },
+  "facts": [
+    {
+      "topic": "AI",
+      "title": "AI can represent similarity as a distance between lists of numbers",
+      "claim": "An embedding represents an item as a numerical vector. Comparing vectors can help a model find items it represents as similar.",
+      "context": "For text, that can help connect related wording without requiring an exact word match. The relationships depend on the training data and task: being nearby in an embedding does not prove two statements are true or equivalent.",
+      "as_of": "General machine-learning concept; source checked October 27, 2026",
+      "checked_on": "2026-10-27",
+      "sources": [
+        {
+          "title": "Google ML Crash Course: Embedding space",
+          "url": "https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space",
+          "note": "Definition, distance as relative similarity and task-dependent representations."
+        }
+      ]
+    },
+    {
+      "topic": "Data centers",
+      "title": "Megawatts and megawatt-hours answer different questions",
+      "claim": "Megawatts measure power—the rate of electricity use. Megawatt-hours measure energy used over time: a steady 100 MW load for 24 hours uses 2,400 MWh.",
+      "context": "A data center's announced capacity does not tell us its actual annual consumption. That requires knowing how much power it draws over time, including how fully and how often it operates. The example is arithmetic, not a measurement of a particular facility.",
+      "as_of": "Standard electricity units applied to data-center reporting; source checked October 27, 2026",
+      "checked_on": "2026-10-27",
+      "sources": [
+        {
+          "title": "U.S. EIA: Measuring electricity",
+          "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+          "note": "Definitions of watts, megawatts and watt-hours; constant-load example calculated from these definitions."
+        }
+      ]
+    }
+  ],
+  "feature_slug": "who-gets-to-decide-what-ai-can-do"
+}

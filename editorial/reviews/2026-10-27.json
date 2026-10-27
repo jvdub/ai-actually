@@ -1,0 +1,63 @@
+{
+  "reviewer": "AI editorial source review of complete draft; not independent expert verification",
+  "verdict": "ready",
+  "unresolved": [],
+  "checks": {
+    "historical_story": {
+      "verdict": "supported",
+      "basis": "March 20 2024 Nature primary paper directly read: up-to-five-day ungauged river forecast reliability compared to then-current GloFAS nowcasts, authors' reported operational coverage >80 countries. Historical and operational dates explicit; no current coverage count, flash-flood universality or mortality impact asserted. Distinct from last week's subseasonal weather correction story.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41586-024-07145-1"
+      ]
+    },
+    "fact:0": {
+      "verdict": "supported",
+      "basis": "Google ML Crash Course embedding-space chapter directly read. Supports numerical vectors, distances/relative similarity and task-dependent geometry. The truth/equivalence caution is editorial clarification, not a claim embeddings certify meaning.",
+      "sources_checked": [
+        "https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space"
+      ]
+    },
+    "fact:1": {
+      "verdict": "supported",
+      "basis": "EIA Measuring Electricity definitions directly read. Constant-power energy arithmetic 100*24=2400 MWh checked. Capacity is not actual load; example explicitly hypothetical and not present-day consumption statistics.",
+      "sources_checked": [
+        "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php"
+      ]
+    },
+    "story:0": {
+      "verdict": "supported",
+      "basis": "Citrini October 20 original participant report and Anthropic full primary report directly read. Primary report summary and design sections support 211 lab-tested designs, 17 qualifying binders against four toxins, internal research model with human follow-ups, and contract-lab testing. Binding is explicitly not demonstrated cellular neutralization or an antivenom. No animal protection or human efficacy established; multi-toxin goal unmet. Release date qualifies although experiments predate the window. Participant accounts are not independent replication. No cure, publicly available model access, or end-to-end 64-hour drug development claim.",
+      "sources_checked": [
+        "https://www.citriniresearch.com/p/citrini-therapeutics",
+        "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design"
+      ]
+    },
+    "story:1": {
+      "verdict": "supported",
+      "basis": "Scientific Data October 21 primary abstract and Limitations directly read; DeepMind October 22 release corroborates partner/data availability. 90.2% is overall six-class validation accuracy at 8,190 sites, not universal/local certainty. 2020 baseline prominently distinguished from 2026 release. Land-management history and class boundaries introduce uncertainty; compliance benefits conditional.",
+      "sources_checked": [
+        "https://www.nature.com/articles/s41597-026-08299-5",
+        "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
+      ]
+    },
+    "story:2": {
+      "verdict": "supported",
+      "basis": "October 22 primary report and collaborator artifact documentation opened. Report states 239 entry points across 123 libraries, checker separate from AI, single-threaded static RISC-V/Linux/fixed-memory assumptions and <64 MB scope. Results attributed to companies; not all code or vulnerabilities ruled out. Public subset inspected, not independently executed or replicated.",
+      "sources_checked": [
+        "https://www.anthropic.com/research/formal-verification",
+        "https://github.com/theorem-labs/oss-verify-proofs"
+      ]
+    },
+    "story:3": {
+      "verdict": "supported",
+      "basis": "October 22 company announcement, indexed Science/PubMed abstract, accessible author manuscript and official SDBench project documentation assessed. Author PDF is dated November 2025, not claimed as final Science version; key 83.2%/36.1% figures match indexed final abstract. Section 5.3 states simulation, non-representative cases and individual physician comparison. SDBench gatekeeper may synthesize missing test findings. No bedside efficacy, specialist superiority or realized cost savings asserted. Reopened October 22 company report, author manuscript abstract and SDBench documentation for restoration. Company report rounds figures to 83% and 36%; manuscript supports precise 83.2%/36.1%. Science final page blocked during this revision; earlier indexed abstract assessment retained, no new final-paper inspection claimed.",
+      "sources_checked": [
+        "https://microsoft.ai/news/building-medical-superintelligence/",
+        "https://erichorvitz.com/sequential_diagnosis_LM.pdf",
+        "https://microsoft.github.io/sdbench/"
+      ]
+    }
+  },
+  "revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
+  "checked_at": "2026-10-27T15:30:34.305895+00:00"
+}
