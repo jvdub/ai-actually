@@ -56,6 +56,12 @@
       "event": "prepared_for_review",
       "revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
       "at": "2026-10-27T15:30:34.309158+00:00"
+    },
+    {
+      "event": "release_prepared",
+      "revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",
+      "package": ".newsroom/releases/2026-10-27/1205d177f239215925825736c4b7d7b7ce58a374ba823bfc6100235168be63b2",
+      "at": "2026-10-27T15:46:30.332451+00:00"
     }
   ],
   "prepared_revision": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047",

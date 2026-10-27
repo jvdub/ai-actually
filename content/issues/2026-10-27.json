@@ -5,7 +5,7 @@
   "title": "Better tools for the people doing the work",
   "description": "Promising antivenom research, clearer forest maps and tools to help people check software and investigate diagnoses.",
   "date": "2026-10-27",
-  "status": "draft",
+  "status": "published",
   "subject": "AI, Actually: Better tools for the people doing the work",
   "intro": "This week, AI helped researchers find lab-tested leads toward scorpion antivenom, distinguish natural forests from tree plantations, write checkable proofs about software, and investigate medical cases step by step. These are different stages of progress, with people still responsible for testing what works. Our closer look asks who should get to set the boundaries as AI becomes more capable.",
   "window_start": "2026-10-20",
@@ -159,5 +159,6 @@
       ]
     }
   ],
-  "feature_slug": "who-gets-to-decide-what-ai-can-do"
+  "feature_slug": "who-gets-to-decide-what-ai-can-do",
+  "reviewed_sha256": "9cdede910c0fa8de69ed19ca3316d5f9ed26b808ec1c1d82e43b20b85b036047"
 }
